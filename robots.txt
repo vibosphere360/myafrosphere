@@ -1,0 +1,6 @@
+@"
+User-agent: *
+Allow: /
+
+Sitemap: https://myafrosphere.com/sitemap.xml
+"@ | Out-File -FilePath robots.txt -Encoding UTF8

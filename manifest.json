@@ -1,0 +1,29 @@
+@"
+{
+  "name": "myAfrosphere - Building African Communities",
+  "short_name": "myAfrosphere",
+  "description": "Connect with African communities worldwide",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#f59e0b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512", 
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["social", "lifestyle", "productivity"],
+  "lang": "en",
+  "dir": "ltr"
+}
+"@ | Out-File -FilePath manifest.json -Encoding UTF8

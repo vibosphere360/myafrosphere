@@ -1,33 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>myAfrosphere - Beyond Borders. Within Africa | African Diaspora Community Platform</title>
-    <meta name="title" content="myAfrosphere - Beyond Borders. Within Africa | African Diaspora Community Platform">
-    <meta name="description" content="Connect with African communities worldwide. Join cultural discussions, find local meetups, and build professional networks across the diaspora. The premier platform for African professionals, students, and cultural enthusiasts.">
-    <meta name="keywords" content="African diaspora, African community, African professionals, African culture, diaspora network, African events, African business, Pan-African community, African students, cultural connection">
+    <title>myAfrosphere - Connect with African Communities Worldwide | Diaspora Network</title>
+    <meta name="description" content="Join myAfrosphere to connect with African diaspora communities worldwide. Cultural discussions, professional networking, local meetups & events across 54 countries.">
+    <meta name="keywords" content="African diaspora, African community network, Pan-African connections, African professionals, African culture, diaspora networking, African events, African business network, African students abroad, cultural exchange">
     <meta name="author" content="myAfrosphere">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://myafrosphere.com">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://myafrosphere.com">
-    <meta property="og:title" content="myAfrosphere - Beyond Borders. Within Africa">
-    <meta property="og:description" content="The premier platform connecting Africa and its diaspora through authentic community building, cultural preservation, and professional networking.">
-    <meta property="og:image" content="https://myafrosphere.com/og-image.jpg">
+    <meta property="og:url" content="https://myafrosphere.com/">
+    <meta property="og:title" content="myAfrosphere - Connect with African Communities Worldwide">
+    <meta property="og:description" content="The premier platform connecting Africa and its diaspora through authentic community building, cultural preservation, and professional networking across 54 countries.">
+    <meta property="og:image" content="https://myafrosphere.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="myAfrosphere">
     <meta property="og:locale" content="en_US">
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://myafrosphere.com">
-    <meta property="twitter:title" content="myAfrosphere - Beyond Borders. Within Africa">
-    <meta property="twitter:description" content="Connect with African communities worldwide. Join discussions, find meetups, build networks across the diaspora.">
-    <meta property="twitter:image" content="https://myafrosphere.com/twitter-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@myafrosphere">
+    <meta name="twitter:creator" content="@myafrosphere">
+    <meta property="twitter:url" content="https://myafrosphere.com/">
+    <meta property="twitter:title" content="myAfrosphere - Connect with African Communities Worldwide">
+    <meta property="twitter:description" content="Join 2.1M members in 850+ African diaspora communities. Cultural discussions, professional networking & local events across 54 countries.">
+    <meta property="twitter:image" content="https://myafrosphere.com/images/twitter-card.jpg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -35,9 +38,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#000000">
     
     <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; font-src 'self' data:;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
@@ -50,31 +54,59 @@
       "name": "myAfrosphere",
       "description": "The premier platform connecting Africa and its diaspora through authentic community building",
       "url": "https://myafrosphere.com",
-      "logo": "https://myafrosphere.com/logo.png",
+      "logo": "https://myafrosphere.com/images/logo.png",
       "foundingDate": "2024",
       "sameAs": [
         "https://twitter.com/myafrosphere",
         "https://instagram.com/myafrosphere",
-        "https://linkedin.com/company/myafrosphere"
+        "https://linkedin.com/company/myafrosphere",
+        "https://facebook.com/myafrosphere"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "email": "hello@myafrosphere.com"
+        "email": "hello@myafrosphere.com",
+        "url": "https://myafrosphere.com/contact"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "myAfrosphere Team"
       }
     }
     </script>
     
-    <!-- Google Analytics (Privacy-Compliant) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID', {
-        anonymize_ip: true,
-        cookie_flags: 'max-age=63072000;secure;samesite=none'
-      });
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://myafrosphere.com"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Communities",
+        "item": "https://myafrosphere.com/communities"
+      }]
+    }
+    </script>
+    
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "myAfrosphere - Connect with African Communities Worldwide",
+      "description": "The premier platform connecting Africa and its diaspora through authentic community building",
+      "url": "https://myafrosphere.com",
+      "publisher": {
+        "@type": "Organization",
+        "name": "myAfrosphere"
+      }
+    }
     </script>
 
     <style>
@@ -85,11 +117,17 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             background: #000;
             color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        /* Improved focus styles for accessibility */
+        :focus-visible {
+            outline: 3px solid #ff8c00;
+            outline-offset: 3px;
         }
 
         /* Cookie Consent Banner */
@@ -139,6 +177,7 @@
         .cookie-accept {
             background: #ff8c00;
             color: #000;
+            font-weight: 600;
         }
 
         .cookie-decline {
@@ -211,10 +250,28 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.2s ease;
+            position: relative;
         }
 
-        .nav-links a:hover {
+        .nav-links a:hover,
+        .nav-links a:focus {
             color: #ff8c00;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ff8c00;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a:focus::after {
+            width: 100%;
         }
 
         .cta-nav {
@@ -225,6 +282,12 @@
             text-decoration: none;
             font-weight: 600;
             transition: all 0.2s ease;
+        }
+
+        .cta-nav:hover,
+        .cta-nav:focus {
+            background: #ffa500;
+            transform: translateY(-1px);
         }
 
         .auth-buttons {
@@ -241,7 +304,8 @@
             transition: color 0.2s ease;
         }
 
-        .login-btn:hover {
+        .login-btn:hover,
+        .login-btn:focus {
             color: #ff8c00;
         }
 
@@ -290,9 +354,11 @@
             font-size: 24px;
             cursor: pointer;
             transition: color 0.2s ease;
+            padding: 4px;
         }
 
-        .modal-close:hover {
+        .modal-close:hover,
+        .modal-close:focus {
             color: #fff;
         }
 
@@ -369,6 +435,8 @@
         .form-checkbox input[type="checkbox"] {
             margin-top: 4px;
             accent-color: #ff8c00;
+            min-width: 18px;
+            min-height: 18px;
         }
 
         .form-checkbox label {
@@ -382,7 +450,8 @@
             text-decoration: none;
         }
 
-        .form-checkbox a:hover {
+        .form-checkbox a:hover,
+        .form-checkbox a:focus {
             text-decoration: underline;
         }
 
@@ -400,7 +469,8 @@
             margin-bottom: 24px;
         }
 
-        .auth-button:hover {
+        .auth-button:hover,
+        .auth-button:focus {
             background: #ffa500;
             transform: translateY(-1px);
         }
@@ -460,7 +530,8 @@
             transition: all 0.2s ease;
         }
 
-        .social-button:hover {
+        .social-button:hover,
+        .social-button:focus {
             border-color: #555;
             background: #1a1a1a;
         }
@@ -477,7 +548,8 @@
             font-weight: 500;
         }
 
-        .modal-switch a:hover {
+        .modal-switch a:hover,
+        .modal-switch a:focus {
             text-decoration: underline;
         }
 
@@ -522,6 +594,7 @@
             color: #ffffff;
             margin-bottom: 16px;
             letter-spacing: -1px;
+            line-height: 1.1;
         }
 
         .tagline {
@@ -563,7 +636,8 @@
             transition: all 0.2s ease;
         }
 
-        .cta-button:hover {
+        .cta-button:hover,
+        .cta-button:focus {
             background: #ffa500;
             transform: translateY(-2px);
         }
@@ -636,7 +710,8 @@
             transition: all 0.3s ease;
         }
 
-        .community-card:hover {
+        .community-card:hover,
+        .community-card:focus-within {
             background: #161616;
             transform: translateY(-4px);
         }
@@ -733,7 +808,8 @@
             border-color: #ff8c00;
         }
 
-        .mode-tab:hover:not(.active) {
+        .mode-tab:hover:not(.active),
+        .mode-tab:focus:not(.active) {
             border-color: #555;
             color: #999;
         }
@@ -798,7 +874,8 @@
             transition: color 0.2s ease;
         }
 
-        .footer-section a:hover {
+        .footer-section a:hover,
+        .footer-section a:focus {
             color: #ff8c00;
         }
 
@@ -824,7 +901,8 @@
             font-size: 14px;
         }
 
-        .footer-links a:hover {
+        .footer-links a:hover,
+        .footer-links a:focus {
             color: #ff8c00;
         }
 
@@ -887,12 +965,39 @@
             }
         }
 
+        /* Print Styles */
+        @media print {
+            nav, footer, .cookie-banner {
+                display: none !important;
+            }
+            
+            body {
+                background: #fff;
+                color: #000;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+            
+            .hero-section, .features-section, .community-showcase, .polymorphic-section, .stats-section {
+                padding: 40px 0;
+                break-inside: avoid;
+            }
+            
+            .cta-button {
+                display: none;
+            }
+        }
+
         /* Accessibility */
         @media (prefers-reduced-motion: reduce) {
             * {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
             }
         }
 
@@ -911,6 +1016,35 @@
         .skip-link:focus {
             top: 6px;
         }
+
+        /* Dark mode preference */
+        @media (prefers-color-scheme: dark) {
+            /* Already dark by default */
+        }
+
+        /* High contrast mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --text-color: #fff;
+                --background-color: #000;
+                --accent-color: #ff0;
+            }
+            
+            body {
+                color: var(--text-color);
+                background: var(--background-color);
+            }
+            
+            .cta-button, .cookie-accept, .auth-button {
+                background: var(--accent-color);
+                color: #000;
+                border: 2px solid #000;
+            }
+            
+            .nav-links a, .footer-section a {
+                text-decoration: underline;
+            }
+        }
     </style>
 </head>
 <body>
@@ -918,7 +1052,7 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Cookie Consent Banner -->
-    <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-banner" id="cookieBanner" aria-live="polite" aria-atomic="true">
         <div class="cookie-content">
             <div class="cookie-text">
                 We use cookies to enhance your experience and analyze site usage. By continuing, you consent to our use of cookies. 
@@ -940,16 +1074,16 @@
                 </div>
                 <span style="font-weight: 700;">myAfrosphere</span>
             </a>
-            <ul class="nav-links">
-                <li><a href="/communities">Communities</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/contact">Contact</a></li>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="/communities" role="menuitem">Communities</a></li>
+                <li role="none"><a href="/events" role="menuitem">Events</a></li>
+                <li role="none"><a href="/about" role="menuitem">About</a></li>
+                <li role="none"><a href="/blog" role="menuitem">Blog</a></li>
+                <li role="none"><a href="/contact" role="menuitem">Contact</a></li>
             </ul>
             <div class="auth-buttons">
-                <a href="#" class="login-btn" onclick="openModal('loginModal')">Log In</a>
-                <a href="#" class="cta-nav" onclick="openModal('signupModal')">Sign Up</a>
+                <a href="#" class="login-btn" onclick="openModal('loginModal')" role="button">Log In</a>
+                <a href="#" class="cta-nav" onclick="openModal('signupModal')" role="button">Sign Up</a>
             </div>
         </div>
     </nav>
@@ -974,42 +1108,42 @@
             <section class="community-showcase" aria-labelledby="communities-title">
                 <h2 id="communities-title" class="section-title">Communities Around the World</h2>
                 <div class="communities-grid">
-                    <article class="community-card">
+                    <article class="community-card" tabindex="0">
                         <div class="community-image" role="img" aria-label="Nigerian flag emoji">🇳🇬</div>
                         <h3 class="community-name">Lagos Tech Hub</h3>
                         <p class="community-location">Lagos, Nigeria</p>
                         <p class="community-description">Where Nigeria's brightest tech minds connect, collaborate, and build the future of African innovation.</p>
                     </article>
                     
-                    <article class="community-card">
+                    <article class="community-card" tabindex="0">
                         <div class="community-image" role="img" aria-label="Government building emoji">🏛️</div>
                         <h3 class="community-name">Diaspora DC</h3>
                         <p class="community-location">Washington D.C., USA</p>
                         <p class="community-description">African professionals in the nation's capital building bridges between homeland and diaspora.</p>
                     </article>
                     
-                    <article class="community-card">
+                    <article class="community-card" tabindex="0">
                         <div class="community-image" role="img" aria-label="Artist palette emoji">🎨</div>
                         <h3 class="community-name">Joburg Creatives</h3>
                         <p class="community-location">Johannesburg, South Africa</p>
                         <p class="community-description">Artists, designers, and storytellers shaping the cultural narrative of modern Africa.</p>
                     </article>
                     
-                    <article class="community-card">
+                    <article class="community-card" tabindex="0">
                         <div class="community-image" role="img" aria-label="British flag emoji">🇬🇧</div>
                         <h3 class="community-name">London Afros</h3>
                         <p class="community-location">London, UK</p>
                         <p class="community-description">The African diaspora in London creating community, culture, and business opportunities.</p>
                     </article>
                     
-                    <article class="community-card">
+                    <article class="community-card" tabindex="0">
                         <div class="community-image" role="img" aria-label="Briefcase emoji">💼</div>
                         <h3 class="community-name">Accra Entrepreneurs</h3>
                         <p class="community-location">Accra, Ghana</p>
                         <p class="community-description">Business leaders and startup founders driving economic growth across West Africa.</p>
                     </article>
                     
-                    <article class="community-card">
+                    <article class="community-card" tabindex="0">
                         <div class="community-image" role="img" aria-label="Graduation cap emoji">🎓</div>
                         <h3 class="community-name">HBCU Alliance</h3>
                         <p class="community-location">Multiple Cities, USA</p>
@@ -1050,13 +1184,13 @@
             <section class="polymorphic-section" aria-labelledby="polymorphic-title">
                 <h2 id="polymorphic-title" class="section-title">One Platform, Many Experiences</h2>
                 <div class="mode-switcher" role="tablist">
-                    <button class="mode-tab active" role="tab" onclick="switchMode(this, 'forum')" aria-selected="true">Forum</button>
-                    <button class="mode-tab" role="tab" onclick="switchMode(this, 'social')" aria-selected="false">Social</button>
-                    <button class="mode-tab" role="tab" onclick="switchMode(this, 'network')" aria-selected="false">Professional</button>
-                    <button class="mode-tab" role="tab" onclick="switchMode(this, 'events')" aria-selected="false">Events</button>
+                    <button class="mode-tab active" role="tab" onclick="switchMode(this, 'forum')" aria-selected="true" aria-controls="preview-content">Forum</button>
+                    <button class="mode-tab" role="tab" onclick="switchMode(this, 'social')" aria-selected="false" aria-controls="preview-content">Social</button>
+                    <button class="mode-tab" role="tab" onclick="switchMode(this, 'network')" aria-selected="false" aria-controls="preview-content">Professional</button>
+                    <button class="mode-tab" role="tab" onclick="switchMode(this, 'events')" aria-selected="false" aria-controls="preview-content">Events</button>
                 </div>
-                <div class="interface-preview" role="tabpanel">
-                    <div class="preview-content" id="preview-content">
+                <div class="interface-preview" role="tabpanel" id="preview-content" aria-labelledby="polymorphic-title">
+                    <div class="preview-content">
                         <h3>Deep Discussions</h3>
                         <p>Reddit-style conversations with African cultural context.<br>Voice comments, live audio rooms, and expert AMAs.</p>
                     </div>
@@ -1113,11 +1247,269 @@
                     <h4>Connect</h4>
                     <ul>
                         <li><a href="/contact">Contact Us</a></li>
-                        <li><a href="https://twitter.com/myafrosphere" target="_blank" rel="noopener">Twitter</a></li>
-                        <li><a href="https://instagram.com/myafrosphere" target="_blank" rel="noopener">Instagram</a></li>
-                        <li><a href="https://linkedin.com/company/myafrosphere" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://twitter.com/myafrosphere" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                        <li><a href="https://instagram.com/myafrosphere" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://linkedin.com/company/myafrosphere" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Legal</h4>
                     <ul>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/cookie-policy">Cookie Policy</a></li>
+                        <li><a href="/gdpr">GDPR Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="/accessibility">Accessibility</a>
+                    <a href="/sitemap">Sitemap</a>
+                    <a href="/careers">Careers</a>
+                    <a href="/press">Press</a>
+                </div>
+                <p>&copy; 2024 myAfrosphere. All rights reserved. Proudly African.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('loginModal')" aria-label="Close login modal">&times;</button>
+            <h2 id="loginModalTitle" class="modal-title">Welcome Back</h2>
+            <p class="modal-subtitle">Log in to your myAfrosphere account</p>
+            
+            <form id="loginForm" method="post">
+                <div class="form-group">
+                    <label for="loginEmail" class="form-label">Email Address</label>
+                    <input type="email" id="loginEmail" class="form-input" placeholder="your@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" required>
+                </div>
+                
+                <div class="form-checkbox">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                
+                <button type="submit" class="auth-button">Log In</button>
+            </form>
+            
+            <div class="divider"><span>or</span></div>
+            
+            <div class="social-buttons">
+                <a href="#" class="social-button">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M19.8055 10.2303C19.8055 9.55056 19.7491 8.86711 19.6274 8.19836H10.2002V12.0492H15.6016C15.3774 13.2911 14.6587 14.3898 13.6037 15.0879V17.5866H16.8255C18.7177 15.8449 19.8055 13.2728 19.8055 10.2303Z" fill="#4285F4"/>
+                        <path d="M10.2002 20.0006C12.897 20.0006 15.1714 19.1151 16.8286 17.5865L13.6067 15.0879C12.7096 15.6979 11.5521 16.0433 10.2032 16.0433C7.59432 16.0433 5.38238 14.2832 4.58903 11.9169H1.26367V14.4927C2.96115 17.8695 6.4186 20.0006 10.2002 20.0006Z" fill="#34A853"/>
+                        <path d="M4.58583 11.9169C4.16667 10.6749 4.16667 9.33008 4.58583 8.08811V5.51233H1.26365C-0.154291 8.33798 -0.154291 11.667 1.26365 14.4927L4.58583 11.9169Z" fill="#FBBC04"/>
+                        <path d="M10.2002 3.95805C11.6256 3.936 13.0034 4.47247 14.036 5.45722L16.891 2.60218C15.0831 0.904599 12.6838 -0.0287217 10.2002 0.000673888C6.4186 0.000673888 2.96115 2.13185 1.26367 5.51234L4.58585 8.08813C5.3759 5.71811 7.59204 3.95805 10.2002 3.95805Z" fill="#EA4335"/>
+                    </svg>
+                    Continue with Google
+                </a>
+                <a href="#" class="social-button">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10C20 4.477 15.523 0 10 0ZM10.75 15.5H9.25V9.25H10.75V15.5ZM10.75 8H9.25V6.5H10.75V8Z" fill="#1877F2"/>
+                    </svg>
+                    Continue with Facebook
+                </a>
+            </div>
+            
+            <p class="modal-switch">Don't have an account? <a href="#" onclick="switchToSignup()">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal" role="dialog" aria-modal="true" aria-labelledby="signupModalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('signupModal')" aria-label="Close signup modal">&times;</button>
+            <h2 id="signupModalTitle" class="modal-title">Join myAfrosphere</h2>
+            <p class="modal-subtitle">Create your free account</p>
+            
+            <form id="signupForm" method="post">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" id="firstName" class="form-input" placeholder="First" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" id="lastName" class="form-input" placeholder="Last" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signupEmail" class="form-label">Email Address</label>
+                    <input type="email" id="signupEmail" class="form-input" placeholder="your@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signupPassword" class="form-label">Password</label>
+                    <input type="password" id="signupPassword" class="form-input" placeholder="••••••••" required minlength="8">
+                </div>
+                
+                <div class="form-group">
+                    <label for="country" class="form-label">Country/Region</label>
+                    <select id="country" class="form-select" required>
+                        <option value="" disabled selected>Select your country</option>
+                        <option value="NG">Nigeria</option>
+                        <option value="GH">Ghana</option>
+                        <option value="KE">Kenya</option>
+                        <option value="ZA">South Africa</option>
+                        <option value="US">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="CA">Canada</option>
+                        <!-- More countries would be added here -->
+                    </select>
+                </div>
+                
+                <div class="form-checkbox">
+                    <input type="checkbox" id="termsAgree" required>
+                    <label for="termsAgree">I agree to the <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a></label>
+                </div>
+                
+                <div class="form-checkbox">
+                    <input type="checkbox" id="newsletter">
+                    <label for="newsletter">Subscribe to our newsletter</label>
+                </div>
+                
+                <button type="submit" class="auth-button">Create Account</button>
+            </form>
+            
+            <div class="divider"><span>or</span></div>
+            
+            <div class="social-buttons">
+                <a href="#" class="social-button">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M19.8055 10.2303C19.8055 9.55056 19.7491 8.86711 19.6274 8.19836H10.2002V12.0492H15.6016C15.3774 13.2911 14.6587 14.3898 13.6037 15.0879V17.5866H16.8255C18.7177 15.8449 19.8055 13.2728 19.8055 10.2303Z" fill="#4285F4"/>
+                        <path d="M10.2002 20.0006C12.897 20.0006 15.1714 19.1151 16.8286 17.5865L13.6067 15.0879C12.7096 15.6979 11.5521 16.0433 10.2032 16.0433C7.59432 16.0433 5.38238 14.2832 4.58903 11.9169H1.26367V14.4927C2.96115 17.8695 6.4186 20.0006 10.2002 20.0006Z" fill="#34A853"/>
+                        <path d="M4.58583 11.9169C4.16667 10.6749 4.16667 9.33008 4.58583 8.08811V5.51233H1.26365C-0.154291 8.33798 -0.154291 11.667 1.26365 14.4927L4.58583 11.9169Z" fill="#FBBC04"/>
+                        <path d="M10.2002 3.95805C11.6256 3.936 13.0034 4.47247 14.036 5.45722L16.891 2.60218C15.0831 0.904599 12.6838 -0.0287217 10.2002 0.000673888C6.4186 0.000673888 2.96115 2.13185 1.26367 5.51234L4.58585 8.08813C5.3759 5.71811 7.59204 3.95805 10.2002 3.95805Z" fill="#EA4335"/>
+                    </svg>
+                    Continue with Google
+                </a>
+                <a href="#" class="social-button">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10C20 4.477 15.523 0 10 0ZM10.75 15.5H9.25V9.25H10.75V15.5ZM10.75 8H9.25V6.5H10.75V8Z" fill="#1877F2"/>
+                    </svg>
+                    Continue with Facebook
+                </a>
+            </div>
+            
+            <p class="modal-switch">Already have an account? <a href="#" onclick="switchToLogin()">Log in</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Cookie Consent Functions
+        function checkCookieConsent() {
+            if (!localStorage.getItem('cookieConsent')) {
+                document.getElementById('cookieBanner').style.display = 'block';
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').style.display = 'none';
+            // Initialize analytics tracking here
+        }
+
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            document.getElementById('cookieBanner').style.display = 'none';
+        }
+
+        // Modal Functions
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        function switchToSignup() {
+            closeModal('loginModal');
+            openModal('signupModal');
+        }
+
+        function switchToLogin() {
+            closeModal('signupModal');
+            openModal('loginModal');
+        }
+
+        // Polymorphic Interface Switcher
+        function switchMode(button, mode) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.mode-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            // Update preview content based on mode
+            const previewContent = document.querySelector('.preview-content');
+            switch(mode) {
+                case 'forum':
+                    previewContent.innerHTML = '<h3>Deep Discussions</h3><p>Reddit-style conversations with African cultural context.<br>Voice comments, live audio rooms, and expert AMAs.</p>';
+                    break;
+                case 'social':
+                    previewContent.innerHTML = '<h3>Cultural Sharing</h3><p>Instagram meets African storytelling. Share moments, recipes, fashion, and traditions with your community.</p>';
+                    break;
+                case 'network':
+                    previewContent.innerHTML = '<h3>Professional Network</h3><p>LinkedIn for the diaspora. Find mentors, jobs, and business opportunities within African professional circles.</p>';
+                    break;
+                case 'events':
+                    previewContent.innerHTML = '<h3>Community Events</h3><p>Discover and create local meetups, festivals, and professional networking events in your city.</p>';
+                    break;
+            }
+        }
+
+        // Form Submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add login logic here
+            alert('Login functionality would be implemented here');
+            closeModal('loginModal');
+        });
+
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add signup logic here
+            alert('Signup functionality would be implemented here');
+            closeModal('signupModal');
+        });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            checkCookieConsent();
+            
+            // Close modal when clicking outside
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        closeModal(modal.id);
+                    }
+                });
+            });
+            
+            // Add keyboard navigation for modals
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    document.querySelectorAll('.modal.show').forEach(modal => {
+                        closeModal(modal.id);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

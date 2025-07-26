@@ -3,895 +3,891 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyAfroSphere - Connect with the African Diaspora | Pan-African Network</title>
-    <meta name="description" content="MyAfroSphere: Connect with the global African diaspora. Explore African culture through topics like African Architecture and create your own communities.">
-    <meta name="keywords" content="African diaspora, African culture, Pan-African network, community building, African architecture, African history, user-generated communities">
+    
+    <!-- Primary Meta Tags -->
+    <title>myAfrosphere - Beyond Borders. Within Africa | African Diaspora Community Platform</title>
+    <meta name="title" content="myAfrosphere - Beyond Borders. Within Africa | African Diaspora Community Platform">
+    <meta name="description" content="Connect with African communities worldwide. Join cultural discussions, find local meetups, and build professional networks across the diaspora. The premier platform for African professionals, students, and cultural enthusiasts.">
+    <meta name="keywords" content="African diaspora, African community, African professionals, African culture, diaspora network, African events, African business, Pan-African community, African students, cultural connection">
+    <meta name="author" content="myAfrosphere">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="MyAfroSphere Team">
-    <link rel="canonical" href="https://myafrosphere.com/" />
+    <link rel="canonical" href="https://myafrosphere.com">
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="MyAfroSphere - Pan-African Community Platform" />
-    <meta property="og:description" content="Join MyAfroSphere to explore African culture, connect with the diaspora, and create your own unique community spaces." />
-    <meta property="og:image" content="https://myafrosphere.com/images/social-preview.jpg" />
-    <meta property="og:url" content="https://myafrosphere.com" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@myafrosphere" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://myafrosphere.com">
+    <meta property="og:title" content="myAfrosphere - Beyond Borders. Within Africa">
+    <meta property="og:description" content="The premier platform connecting Africa and its diaspora through authentic community building, cultural preservation, and professional networking.">
+    <meta property="og:image" content="https://myafrosphere.com/og-image.jpg">
+    <meta property="og:site_name" content="myAfrosphere">
+    <meta property="og:locale" content="en_US">
     
-    <!-- Security Headers (to be implemented server-side, included here for reference) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://api.myafrosphere.com;">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://myafrosphere.com">
+    <meta property="twitter:title" content="myAfrosphere - Beyond Borders. Within Africa">
+    <meta property="twitter:description" content="Connect with African communities worldwide. Join discussions, find meetups, build networks across the diaspora.">
+    <meta property="twitter:image" content="https://myafrosphere.com/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="/manifest.webmanifest">
-    <meta name="theme-color" content="#1a2a3a">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-    
-    <!-- Language Alternates -->
-    <link rel="alternate" hreflang="en" href="https://myafrosphere.com/" />
-    <link rel="alternate" hreflang="sw" href="https://myafrosphere.com/sw/" />
-    <link rel="alternate" hreflang="am" href="https://myafrosphere.com/am/" />
-    <link rel="alternate" hreflang="ar" href="https://myafrosphere.com/ar/" />
-    <link rel="alternate" hreflang="ha" href="https://myafrosphere.com/ha/" />
-    <link rel="alternate" hreflang="pt" href="https://myafrosphere.com/pt/" />
-    <link rel="alternate" hreflang="ig" href="https://myafrosphere.com/ig/" />
-    <link rel="alternate" hreflang="yo" href="https://myafrosphere.com/yo/" />
-    <link rel="alternate" hreflang="zu" href="https://myafrosphere.com/zu/" />
-    <link rel="alternate" hreflang="om" href="https://myafrosphere.com/om/" />
-    <link rel="alternate" hreflang="sn" href="https://myafrosphere.com/sn/" />
-    <link rel="alternate" hreflang="es" href="https://myafrosphere.com/es/" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SocialMediaPlatform",
-      "name": "MyAfroSphere",
-      "description": "A Pan-African network connecting the global diaspora through diverse interests and user-created communities.",
+      "@type": "Organization",
+      "name": "myAfrosphere",
+      "description": "The premier platform connecting Africa and its diaspora through authentic community building",
       "url": "https://myafrosphere.com",
       "logo": "https://myafrosphere.com/logo.png",
       "foundingDate": "2024",
-      "memberOf": {
-        "@type": "Organization",
-        "name": "Pan-African Digital Network"
-      },
       "sameAs": [
         "https://twitter.com/myafrosphere",
-        "https://facebook.com/myafrosphere"
-      ]
+        "https://instagram.com/myafrosphere",
+        "https://linkedin.com/company/myafrosphere"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "hello@myafrosphere.com"
+      }
     }
     </script>
     
+    <!-- Google Analytics (Privacy-Compliant) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID', {
+        anonymize_ip: true,
+        cookie_flags: 'max-age=63072000;secure;samesite=none'
+      });
+    </script>
+
     <style>
-        /* CSS remains unchanged from original except for minor additions */
-        :root {
-            --primary: #22c55e;
-            --primary-dark: #16a34a;
-            --primary-light: #86efac;
-            --dark-bg: #0f172a;
-            --darker-bg: #020617;
-            --card-bg: #1e293b;
-            --text-light: #e2e8f0;
-            --text-lighter: #94a3b8;
-            --accent: #f59e0b;
-            --accent-dark: #d97706;
-            --glass-bg: rgba(30, 41, 59, 0.7);
-            --glow-primary: rgba(34, 197, 94, 0.3);
-        }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
         }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
-            color: white;
-            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #000;
+            color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 20%, var(--glow-primary) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 60%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: -1;
-        }
-        
-        #offline-notice {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: var(--accent);
-            color: var(--darker-bg);
-            padding: 0.75rem;
-            text-align: center;
-            z-index: 1000;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
-        }
-        
-        header {
-            position: sticky;
-            top: 0;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            z-index: 100;
-            padding: 1rem;
-        }
-        
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .header-logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
-            color: white;
-        }
-        
-        .header-logo-icon {
-            font-size: 2rem;
-            filter: drop-shadow(0 0 10px var(--glow-primary));
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-        }
-        
-        .header-logo h1 {
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .container {
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-        
-        .brand-section {
-            position: relative;
-        }
-        
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--glass-bg);
-            border: 1px solid var(--primary);
-            border-radius: 2rem;
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 20px var(--glow-primary);
-        }
-        
-        .main-logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        
-        .main-logo-icon {
-            font-size: 4rem;
-            animation: pulse 2s infinite;
-            filter: drop-shadow(0 0 20px var(--glow-primary));
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.05); opacity: 0.9; }
-        }
-        
-        .main-logo-text h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            background: linear-gradient(45deg, var(--primary), var(--accent), var(--primary-light));
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradient-shift 3s ease infinite;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        @keyframes gradient-shift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        .verified-badge {
-            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
-            color: white;
-            font-size: 1.2rem;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 15px var(--glow-primary);
-            animation: spin-slow 10s linear infinite;
-        }
-        
-        @keyframes spin-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        .tagline {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-            background: linear-gradient(135deg, white 0%, var(--text-light) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .description {
-            font-size: 1.4rem;
-            color: var(--text-light);
-            margin-bottom: 3rem;
-            font-weight: 500;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-        
-        .stat-card {
-            background: var(--glass-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1rem;
-            padding: 1.5rem;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border-color: var(--primary);
-        }
-        
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--primary);
-            display: block;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-lighter);
-            margin-top: 0.25rem;
-        }
-        
-        .global-community h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--text-lighter);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .country-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 1rem;
-        }
-        
-        .country-card {
-            background: var(--glass-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 0.75rem;
-            padding: 1rem;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-        
-        .country-card:hover {
-            transform: translateY(-3px) scale(1.02);
-            border-color: var(--primary);
-            box-shadow: 0 5px 20px var(--glow-primary);
-        }
-        
-        .country-flag {
-            font-size: 2.5rem;
-            display: block;
-            margin-bottom: 0.5rem;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-        }
-        
-        .country-name {
-            font-size: 0.8rem;
-            color: var(--text-lighter);
-            margin-top: 0.25rem;
-        }
-        
-        .create-community-cta, .create-subsphere-cta {
-            margin-top: 1.5rem;
-            text-align: center;
-        }
-        
-        .create-community-cta p, .create-subsphere-cta p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-        }
-        
-        .subspheres {
-            background: var(--glass-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1.25rem;
-            padding: 2rem;
-            margin-top: 3rem;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-        
-        .subspheres h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-weight: 700;
-        }
-        
-        .subsphere {
-            padding: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border-radius: 0.75rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .subsphere:hover {
-            background: rgba(34, 197, 94, 0.1);
-            border-color: var(--primary);
-            transform: translateX(5px);
-        }
-        
-        .subsphere .flag {
-            font-size: 2rem;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-        }
-        
-        .subsphere-content {
-            flex: 1;
-        }
-        
-        .subsphere-name {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: white;
-        }
-        
-        .subsphere-description {
-            font-size: 0.9rem;
-            color: var(--text-lighter);
-            margin-top: 0.25rem;
-        }
-        
-        .subsphere-members {
-            font-size: 0.9rem;
-            color: var(--primary);
-            font-weight: 600;
-        }
-        
-        .auth-section {
-            background: var(--glass-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 2rem;
-            padding: 2.5rem;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-            position: sticky;
-            top: 120px;
-            max-height: calc(100vh - 140px);
-            overflow-y: auto;
-        }
-        
-        .auth-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .auth-header h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: white;
-        }
-        
-        .auth-header p {
-            color: var(--text-lighter);
-            font-size: 1rem;
-        }
-        
-        .auth-tabs {
-            display: flex;
-            margin-bottom: 2rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 1rem;
-            padding: 0.25rem;
-        }
-        
-        .auth-tabs button {
-            flex: 1;
-            padding: 0.75rem 1rem;
-            background: none;
-            border: none;
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-lighter);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border-radius: 0.75rem;
-        }
-        
-        .auth-tabs button.active {
-            background: var(--primary);
-            color: white;
-            box-shadow: 0 2px 10px var(--glow-primary);
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
-        
-        .form-input {
-            width: 100%;
-            padding: 1rem 1.25rem;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1rem;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            outline: none;
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-            backdrop-filter: blur(10px);
-        }
-        
-        .form-input::placeholder {
-            color: var(--text-lighter);
-        }
-        
-        .form-input:focus {
-            border-color: var(--primary);
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 0 4px var(--glow-primary);
-            transform: translateY(-2px);
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-        
-        .btn-primary {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            border: none;
-            border-radius: 1rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-bottom: 1.5rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px var(--glow-primary);
-        }
-        
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-        
-        .btn-secondary {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1rem;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-bottom: 1.5rem;
-            backdrop-filter: blur(10px);
-        }
-        
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--primary);
-            transform: translateY(-2px);
-        }
-        
-        .btn-loading {
-            pointer-events: none;
-            opacity: 0.8;
-        }
-        
-        .btn-loading::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border: 3px solid transparent;
-            border-top-color: white;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            top: 50%;
-            left: 50%;
-            margin-top: -10px;
-            margin-left: -10px;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .error-message {
-            color: #ef4444;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-            display: none;
-        }
-        
-        .has-error .form-input {
-            border-color: #ef4444;
-            box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.2);
-        }
-        
-        .has-error .error-message {
-            display: block;
-        }
-        
-        .divider {
-            display: flex;
-            align-items: center;
-            margin: 2rem 0;
-            color: var(--text-lighter);
-            font-size: 0.9rem;
-        }
-        
-        .divider::before,
-        .divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        .divider span {
-            padding: 0 1rem;
-        }
-        
-        .language-selector {
-            position: relative;
-        }
-        
-        .language-btn {
-            background: var(--glass-bg);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 0.75rem 1rem;
-            border-radius: 0.75rem;
-            cursor: pointer;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-        
-        .language-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--primary);
-        }
-        
-        .language-options {
-            display: none;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 0.75rem;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            min-width: 200px;
-            max-height: 300px;
-            overflow-y: auto;
-            z-index: 1000;
-            margin-top: 0.5rem;
-        }
-        
-        .language-options.show {
-            display: block;
-        }
-        
-        .language-option {
-            padding: 0.75rem 1rem;
-            cursor: pointer;
-            color: white;
-            font-size: 0.9rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.2s ease;
-        }
-        
-        .language-option:hover {
-            background: rgba(34, 197, 94, 0.1);
-        }
-        
-        .language-option:last-child {
-            border-bottom: none;
-        }
-        
-        .language-option.active {
-            background: var(--primary);
-            color: white;
-        }
-        
-        .auth-footer {
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-        }
-        
-        .auth-footer a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-        
-        .auth-footer a:hover {
-            color: var(--primary-light);
-            text-decoration: underline;
-        }
-        
-        .security-note {
-            font-size: 0.85rem;
-            color: var(--text-lighter);
-            text-align: center;
-            margin-top: 1.5rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 0.75rem;
-        }
-        
-        .security-note a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        #cookie-banner {
+
+        /* Cookie Consent Banner */
+        .cookie-banner {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            color: white;
-            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid #333;
+            padding: 20px;
+            z-index: 1000;
+            display: none;
+        }
+
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            gap: 1rem;
-            z-index: 1000;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            gap: 20px;
+            flex-wrap: wrap;
         }
-        
-        .cookie-buttons {
+
+        .cookie-text {
+            flex: 1;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .cookie-actions {
             display: flex;
-            gap: 0.75rem;
+            gap: 10px;
         }
-        
+
         .cookie-btn {
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .cookie-accept {
-            background: var(--primary);
-            color: white;
+            padding: 10px 20px;
             border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
-        
-        .cookie-accept:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
+
+        .cookie-accept {
+            background: #ff8c00;
+            color: #000;
         }
-        
+
         .cookie-decline {
             background: transparent;
-            color: var(--text-lighter);
-            border: 1px solid var(--text-lighter);
+            color: #fff;
+            border: 1px solid #333;
         }
-        
-        .cookie-decline:hover {
-            background: rgba(255, 255, 255, 0.1);
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
-        
-        @media (max-width: 1024px) {
-            .container {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-            
-            .auth-section {
-                position: static;
-                max-height: none;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #222;
+            z-index: 100;
+            padding: 16px 0;
         }
-        
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-nav {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .logo-small {
+            width: 40px;
+            height: 40px;
+            background: #ff8c00;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .africa-small {
+            width: 20px;
+            height: 24px;
+            background: #000;
+            clip-path: polygon(50% 0%, 65% 15%, 85% 20%, 90% 35%, 95% 50%, 90% 70%, 75% 85%, 60% 95%, 40% 95%, 25% 85%, 10% 70%, 5% 50%, 10% 35%, 15% 20%, 35% 15%);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff8c00;
+        }
+
+        .cta-nav {
+            background: #ff8c00;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .login-btn {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 16px;
+            transition: color 0.2s ease;
+        }
+
+        .login-btn:hover {
+            color: #ff8c00;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: #111;
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+            border: 1px solid #333;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #666;
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .modal-close:hover {
+            color: #fff;
+        }
+
+        .modal-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .modal-subtitle {
+            color: #999;
+            text-align: center;
+            margin-bottom: 32px;
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            color: #ccc;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 16px;
+            background: #0a0a0a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 16px;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #ff8c00;
+        }
+
+        .form-input::placeholder {
+            color: #666;
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 16px;
+            background: #0a0a0a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-select:focus {
+            outline: none;
+            border-color: #ff8c00;
+        }
+
+        .form-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .form-checkbox input[type="checkbox"] {
+            margin-top: 4px;
+            accent-color: #ff8c00;
+        }
+
+        .form-checkbox label {
+            color: #ccc;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .form-checkbox a {
+            color: #ff8c00;
+            text-decoration: none;
+        }
+
+        .form-checkbox a:hover {
+            text-decoration: underline;
+        }
+
+        .auth-button {
+            width: 100%;
+            background: #ff8c00;
+            color: #000;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-bottom: 24px;
+        }
+
+        .auth-button:hover {
+            background: #ffa500;
+            transform: translateY(-1px);
+        }
+
+        .auth-button:disabled {
+            background: #333;
+            color: #666;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 24px 0;
+            position: relative;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #333;
+            z-index: 1;
+        }
+
+        .divider span {
+            background: #111;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 14px;
+            border: 1px solid #333;
+            border-radius: 12px;
+            background: transparent;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .social-button:hover {
+            border-color: #555;
+            background: #1a1a1a;
+        }
+
+        .modal-switch {
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .modal-switch a {
+            color: #ff8c00;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .modal-switch a:hover {
+            text-decoration: underline;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        /* Main Content */
+        main {
+            padding-top: 80px;
+        }
+
+        .header {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 40px;
+            border-radius: 50%;
+            background: #ff8c00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .africa-shape {
+            width: 60px;
+            height: 70px;
+            background: #000;
+            clip-path: polygon(50% 0%, 65% 15%, 85% 20%, 90% 35%, 95% 50%, 90% 70%, 75% 85%, 60% 95%, 40% 95%, 25% 85%, 10% 70%, 5% 50%, 10% 35%, 15% 20%, 35% 15%);
+        }
+
+        .brand-name {
+            font-size: 72px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 24px;
+            color: #999;
+            font-weight: 400;
+            margin-bottom: 80px;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 100px 0 120px;
+        }
+
+        .hero-title {
+            font-size: 96px;
+            font-weight: 800;
+            line-height: 0.9;
+            margin-bottom: 32px;
+            color: #ffffff;
+        }
+
+        .hero-subtitle {
+            font-size: 32px;
+            color: #666;
+            margin-bottom: 60px;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff8c00;
+            color: #000;
+            padding: 20px 48px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background: #ffa500;
+            transform: translateY(-2px);
+        }
+
+        .features-section {
+            padding: 120px 0;
+            border-top: 1px solid #222;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 80px;
+            color: #ffffff;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 60px;
+            margin-bottom: 120px;
+        }
+
+        .feature {
+            text-align: left;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: #111;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 32px;
+            font-size: 32px;
+        }
+
+        .feature-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #ffffff;
+        }
+
+        .feature-description {
+            font-size: 18px;
+            color: #999;
+            line-height: 1.6;
+        }
+
+        .community-showcase {
+            padding: 120px 0;
+            border-top: 1px solid #222;
+        }
+
+        .communities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .community-card {
+            background: #111;
+            border-radius: 24px;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .community-card:hover {
+            background: #161616;
+            transform: translateY(-4px);
+        }
+
+        .community-image {
+            width: 100%;
+            height: 200px;
+            background: #222;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        .community-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .community-location {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 16px;
+        }
+
+        .community-description {
+            font-size: 16px;
+            color: #999;
+            line-height: 1.5;
+        }
+
+        .stats-section {
+            padding: 120px 0;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 64px;
+            font-weight: 800;
+            color: #ff8c00;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 18px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .polymorphic-section {
+            padding: 120px 0;
+            border-top: 1px solid #222;
+        }
+
+        .mode-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 60px 0;
+            flex-wrap: wrap;
+        }
+
+        .mode-tab {
+            padding: 16px 32px;
+            background: transparent;
+            border: 1px solid #333;
+            border-radius: 50px;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .mode-tab.active {
+            background: #ff8c00;
+            color: #000;
+            border-color: #ff8c00;
+        }
+
+        .mode-tab:hover:not(.active) {
+            border-color: #555;
+            color: #999;
+        }
+
+        .interface-preview {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            border-radius: 24px;
+            padding: 60px;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview-content h3 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #ffffff;
+        }
+
+        .preview-content p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 0 40px;
+            border-top: 1px solid #222;
+            background: #0a0a0a;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-section h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: #999;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-section a:hover {
+            color: #ff8c00;
+        }
+
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid #222;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #ff8c00;
+        }
+
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .main-logo-text h1 {
-                font-size: 2.5rem;
+            .nav-links {
+                display: none;
             }
             
-            .tagline {
-                font-size: 2.5rem;
+            .auth-buttons {
+                gap: 8px;
             }
             
-            .description {
-                font-size: 1.2rem;
+            .auth-buttons .login-btn {
+                display: none;
             }
             
-            .auth-section {
-                padding: 2rem;
-            }
-            
-            .country-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            .auth-section {
-                padding: 1.5rem;
-            }
-            
-            .main-logo-text h1 {
-                font-size: 2rem;
-            }
-            
-            .tagline {
-                font-size: 2rem;
-            }
-            
-            .description {
-                font-size: 1.1rem;
+            .modal-content {
+                margin: 20px;
+                padding: 32px 24px;
             }
             
             .form-row {
                 grid-template-columns: 1fr;
+                gap: 16px;
             }
             
-            .country-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .hero-title {
+                font-size: 64px;
             }
             
-            #cookie-banner {
+            .hero-subtitle {
+                font-size: 24px;
+            }
+            
+            .brand-name {
+                font-size: 48px;
+            }
+            
+            .tagline {
+                font-size: 20px;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .communities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cookie-content {
                 flex-direction: column;
                 text-align: center;
             }
-            
-            .cookie-buttons {
-                width: 100%;
-                justify-content: center;
-            }
         }
-        
+
+        /* Accessibility */
         @media (prefers-reduced-motion: reduce) {
             * {
                 animation-duration: 0.01ms !important;
@@ -899,901 +895,229 @@
                 transition-duration: 0.01ms !important;
             }
         }
-        
+
         .skip-link {
             position: absolute;
             top: -40px;
             left: 6px;
-            background: var(--primary);
-            color: white;
+            background: #ff8c00;
+            color: #000;
             padding: 8px;
             text-decoration: none;
             border-radius: 4px;
-            z-index: 1001;
+            z-index: 1000;
         }
-        
+
         .skip-link:focus {
             top: 6px;
-        }
-        
-        .lazy-load {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease;
-        }
-        
-        .lazy-load.loaded {
-            opacity: 1;
-            transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <!-- Accessibility Skip Link -->
+    <!-- Skip Link for Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- PWA Offline Notice -->
-    <div id="offline-notice" role="alert" aria-live="polite">
-        You're offline. Some features may not be available.
-    </div>
-    
-    <!-- Header -->
-    <header role="banner">
-        <div class="header-content">
-            <a href="/" class="header-logo" aria-label="MyAfroSphere Homepage">
-                <div class="header-logo-icon" aria-hidden="true">🌍</div>
-                <h1>MyAfroSphere</h1>
-            </a>
-            
-            <div class="language-selector">
-                <button class="language-btn" aria-label="Change language" aria-expanded="false" onclick="toggleLanguageDropdown()">
-                    <span id="currentLanguageFlag" aria-hidden="true">🌍</span>
-                    <span id="currentLanguageName">English</span>
-                    <span aria-hidden="true">⌄</span>
-                </button>
-                <div class="language-options" id="languageDropdown" role="menu" aria-hidden="true">
-                    <div class="language-option active" role="menuitem" onclick="selectLanguage('en', '🌍', 'English')">🌍 English</div>
-                    <div class="language-option" role="menuitem" onclick="selectLanguage('sw', '🇹🇿', 'Swahili')">🇹🇿 Swahili</div>
-                    <div class="language-option" role="menuitem" onclick="selectLanguage('am', '🇪🇹', 'Amharic')">🇪🇹 Amharic</div>
-                    <div class="language-option" role="menuitem" onclick="selectLanguage('ar', '🇸🇦', 'Arabic')">🇸🇦 Arabic</div>
-                    <div class="language-option" role="menuitem" onclick="selectLanguage('ha', '🇳🇬', 'Hausa')">🇳🇬 Hausa</div>
-                    <div class="language-option" role="menuitem" onclick="selectLanguage('pt', '🇵🇹', 'Portuguese')">🇵🇹 Portuguese</div>
-                    <div class="language-option" role="menuitem" onclick="selectLanguage('ig', '🇳🇬', 'Igbo')">🇳🇬 Igbo</div>
-                    <div class="language-option" role="menuitem" onclick="selectLanguage('yo', '🇳🇬', 'Yoruba')">🇳🇬 Yoruba</div>
-                    <div class="language-option" role="menuitem" onclick="selectLanguage('zu', '🇿🇦', 'Zulu')">🇿🇦 Zulu</div>
-                    <div class="language-option" role="menuitem" onclick="selectLanguage('om', '🇪🇹', 'Oromo')">🇪🇹 Oromo</div>
-                    <div class="language-option" role="menuitem" onclick="selectLanguage('sn', '🇿🇼', 'Shona')">🇿🇼 Shona</div>
-                    <div class="language-option" role="menuitem" onclick="selectLanguage('es', '🇪🇸', 'Spanish')">🇪🇸 Spanish</div>
-                </div>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                We use cookies to enhance your experience and analyze site usage. By continuing, you consent to our use of cookies. 
+                <a href="/privacy-policy" style="color: #ff8c00;">Learn more</a>
+            </div>
+            <div class="cookie-actions">
+                <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
+                <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
             </div>
         </div>
-    </header>
-    
-    <main id="main-content" role="main">
+    </div>
+
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="logo-nav" aria-label="myAfrosphere Home">
+                <div class="logo-small">
+                    <div class="africa-small"></div>
+                </div>
+                <span style="font-weight: 700;">myAfrosphere</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/communities">Communities</a></li>
+                <li><a href="/events">Events</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="#" class="login-btn" onclick="openModal('loginModal')">Log In</a>
+                <a href="#" class="cta-nav" onclick="openModal('signupModal')">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
         <div class="container">
-            <!-- Left Column: Branding & Value Proposition -->
-            <section class="brand-section" aria-labelledby="hero-heading">
-                <div class="hero-badge lazy-load">
-                    <span aria-hidden="true">✨</span>
-                    <span>Join a growing Pan-African community</span>
+            <header class="header">
+                <div class="logo" role="img" aria-label="myAfrosphere logo with African continent silhouette">
+                    <div class="africa-shape"></div>
                 </div>
-                
-                <div class="main-logo lazy-load">
-                    <div class="main-logo-icon" aria-hidden="true">🌍</div>
-                    <div class="main-logo-text">
-                        <h1 id="hero-heading">MyAfroSphere 
-                            <span class="verified-badge" aria-label="Verified platform">✓</span>
-                        </h1>
-                    </div>
-                </div>
-                
-                <h2 class="tagline lazy-load">Explore. Connect. Create.</h2>
-                <p class="description lazy-load">Join the Pan-African network to explore African culture, connect with the diaspora, and create your own communities.</p>
-                
-                <!-- Stats Grid -->
-                <div class="stats-grid lazy-load">
-                    <div class="stat-card">
-                        <span class="stat-number">Join Now</span>
-                        <span class="stat-label">Start Your Journey</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">54</span>
-                        <span class="stat-label">Countries</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">Create</span>
-                        <span class="stat-label">Your Community</span>
-                    </div>
-                </div>
-                
-                <!-- Country Community Grid -->
-                <section class="global-community lazy-load" aria-labelledby="communities-heading">
-                    <h3 id="communities-heading">
-                        <span aria-hidden="true">🌐</span>
-                        Build Your Nation's Community
-                    </h3>
-                    <div class="country-grid">
-                        <div class="country-card" onclick="navigateToSubsphere('Nigeria')" role="button" tabindex="0" aria-label="Start Nigerian community">
-                            <span class="country-flag" aria-hidden="true">🇳🇬</span>
-                            <div class="country-name">Start Nigeria's Community</div>
-                        </div>
-                        <div class="country-card" onclick="navigateToSubsphere('Ghana')" role="button" tabindex="0" aria-label="Start Ghanaian community">
-                            <span class="country-flag" aria-hidden="true">🇬🇭</span>
-                            <div class="country-name">Start Ghana's Community</div>
-                        </div>
-                        <div class="country-card" onclick="navigateToSubsphere('Kenya')" role="button" tabindex="0" aria-label="Start Kenyan community">
-                            <span class="country-flag" aria-hidden="true">🇰🇪</span>
-                            <div class="country-name">Start Kenya's Community</div>
-                        </div>
-                        <div class="country-card" onclick="navigateToSubsphere('SouthAfrica')" role="button" tabindex="0" aria-label="Start South African community">
-                            <span class="country-flag" aria-hidden="true">🇿🇦</span>
-                            <div class="country-name">Start South Africa's Community</div>
-                        </div>
-                        <div class="country-card" onclick="navigateToSubsphere('Ethiopia')" role="button" tabindex="0" aria-label="Start Ethiopian community">
-                            <span class="country-flag" aria-hidden="true">🇪🇹</span>
-                            <div class="country-name">Start Ethiopia's Community</div>
-                        </div>
-                        <div class="country-card" onclick="showAllCommunities()" role="button" tabindex="0" aria-label="View all communities">
-                            <span class="country-flag" aria-hidden="true">🌐</span>
-                            <div class="country-name">More</div>
-                        </div>
-                    </div>
-                    <div class="create-community-cta">
-                        <p>Can't find your country's community? Start it now and connect your diaspora!</p>
-                        <button class="btn-primary" onclick="window.location.href='/create-community'" aria-label="Start a new community">
-                            Create Your Community
-                        </button>
-                    </div>
-                </section>
-                
-                <!-- Subspheres -->
-                <section class="subspheres lazy-load" aria-labelledby="subspheres-heading">
-                    <h3 id="subspheres-heading">
-                        <span aria-hidden="true">🔥</span> 
-                        Discover Communities
-                    </h3>
-                    <ul role="list">
-                        <li class="subsphere" onclick="window.location.href='/african-architecture';" role="link" tabindex="0" aria-label="Explore African Architecture subsphere">
-                            <span class="flag" aria-hidden="true">🏛️</span>
-                            <div class="subsphere-content">
-                                <div class="subsphere-name">s/AfricanArchitecture</div>
-                                <div class="subsphere-description">Discover the continent's stunning architectural heritage</div>
-                            </div>
-                            <div class="subsphere-members">Explore Now</div>
-                        </li>
-                        <li class="subsphere" onclick="window.location.href='/s/PanAfrican';" role="link" tabindex="0" aria-label="Visit s/PanAfrican subsphere">
-                            <span class="flag" aria-hidden="true">🌍</span>
-                            <div class="subsphere-content">
-                                <div class="subsphere-name">s/PanAfrican</div>
-                                <div class="subsphere-description">United African voices</div>
-                            </div>
-                            <div class="subsphere-members">Explore Now</div>
-                        </li>
-                    </ul>
-                    <div class="create-subsphere-cta">
-                        <p>Passionate about a topic or nation? Create your own subsphere!</p>
-                        <button class="btn-primary" onclick="window.location.href='/create-community'" aria-label="Start a new subsphere">
-                            Start Your Subsphere
-                        </button>
-                    </div>
-                </section>
+                <h1 class="brand-name">myAfrosphere</h1>
+                <p class="tagline">Beyond Borders. Within Africa.</p>
+            </header>
+
+            <section class="hero-section" aria-labelledby="hero-title">
+                <h2 id="hero-title" class="hero-title">The online place<br>to find your<br>African people</h2>
+                <p class="hero-subtitle">Connect with your community, wherever you are</p>
+                <a href="#" class="cta-button" role="button" onclick="openModal('signupModal')">Join the Community</a>
             </section>
-            
-            <!-- Right Column: Auth Forms -->
-            <section class="auth-section lazy-load" aria-labelledby="auth-heading">
-                <div class="auth-tabs" role="tablist" aria-label="Authentication options">
-                    <button class="active" onclick="showAuthTab('login')" role="tab" aria-selected="true" aria-controls="loginForm" id="login-tab">Log In</button>
-                    <button onclick="showAuthTab('signup')" role="tab" aria-selected="false" aria-controls="signupForm" id="signup-tab">Sign Up</button>
+
+            <section class="community-showcase" aria-labelledby="communities-title">
+                <h2 id="communities-title" class="section-title">Communities Around the World</h2>
+                <div class="communities-grid">
+                    <article class="community-card">
+                        <div class="community-image" role="img" aria-label="Nigerian flag emoji">🇳🇬</div>
+                        <h3 class="community-name">Lagos Tech Hub</h3>
+                        <p class="community-location">Lagos, Nigeria</p>
+                        <p class="community-description">Where Nigeria's brightest tech minds connect, collaborate, and build the future of African innovation.</p>
+                    </article>
+                    
+                    <article class="community-card">
+                        <div class="community-image" role="img" aria-label="Government building emoji">🏛️</div>
+                        <h3 class="community-name">Diaspora DC</h3>
+                        <p class="community-location">Washington D.C., USA</p>
+                        <p class="community-description">African professionals in the nation's capital building bridges between homeland and diaspora.</p>
+                    </article>
+                    
+                    <article class="community-card">
+                        <div class="community-image" role="img" aria-label="Artist palette emoji">🎨</div>
+                        <h3 class="community-name">Joburg Creatives</h3>
+                        <p class="community-location">Johannesburg, South Africa</p>
+                        <p class="community-description">Artists, designers, and storytellers shaping the cultural narrative of modern Africa.</p>
+                    </article>
+                    
+                    <article class="community-card">
+                        <div class="community-image" role="img" aria-label="British flag emoji">🇬🇧</div>
+                        <h3 class="community-name">London Afros</h3>
+                        <p class="community-location">London, UK</p>
+                        <p class="community-description">The African diaspora in London creating community, culture, and business opportunities.</p>
+                    </article>
+                    
+                    <article class="community-card">
+                        <div class="community-image" role="img" aria-label="Briefcase emoji">💼</div>
+                        <h3 class="community-name">Accra Entrepreneurs</h3>
+                        <p class="community-location">Accra, Ghana</p>
+                        <p class="community-description">Business leaders and startup founders driving economic growth across West Africa.</p>
+                    </article>
+                    
+                    <article class="community-card">
+                        <div class="community-image" role="img" aria-label="Graduation cap emoji">🎓</div>
+                        <h3 class="community-name">HBCU Alliance</h3>
+                        <p class="community-location">Multiple Cities, USA</p>
+                        <p class="community-description">Students and alumni from Historically Black Colleges connecting heritage with education.</p>
+                    </article>
                 </div>
-                
-                <!-- Login Form -->
-                <div id="loginForm" class="auth-form" role="tabpanel" aria-labelledby="login-tab">
-                    <div class="auth-header">
-                        <h2 id="auth-heading">Welcome Back</h2>
-                        <p>Log in to connect with your community</p>
-                    </div>
+            </section>
+
+            <section class="features-section" aria-labelledby="features-title">
+                <h2 id="features-title" class="section-title">Built for Real Connection</h2>
+                <div class="features-grid">
+                    <article class="feature">
+                        <div class="feature-icon" role="img" aria-label="Speaking head emoji">🗣️</div>
+                        <h3 class="feature-title">Native Language Discussions</h3>
+                        <p class="feature-description">Communicate in your mother tongue with built-in translation. Preserve cultural nuances while building global connections.</p>
+                    </article>
                     
-                    <form onsubmit="handleLogin(event)" novalidate>
-                        <div class="form-group">
-                            <label for="login-email" class="sr-only">Email address</label>
-                            <input type="email" id="login-email" class="form-input" placeholder="Email address" aria-describedby="loginEmailError" required>
-                            <div class="error-message" id="loginEmailError" role="alert"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="login-password" class="sr-only">Password</label>
-                            <input type="password" id="login-password" class="form-input" placeholder="Password" aria-describedby="loginPasswordError" required minlength="8">
-                            <div class="error-message" id="loginPasswordError" role="alert"></div>
-                        </div>
-                        <button type="submit" class="btn-primary" id="loginBtn">
-                            <span id="loginBtnText">Log In</span>
-                        </button>
-                    </form>
+                    <article class="feature">
+                        <div class="feature-icon" role="img" aria-label="Handshake emoji">🤝</div>
+                        <h3 class="feature-title">Real-World Meetups</h3>
+                        <p class="feature-description">Every online community has offline events. Build genuine relationships through cultural celebrations, professional networking, and social gatherings.</p>
+                    </article>
                     
-                    <div class="divider" aria-hidden="true">
-                        <span>or</span>
-                    </div>
+                    <article class="feature">
+                        <div class="feature-icon" role="img" aria-label="Money bag emoji">💰</div>
+                        <h3 class="feature-title">Creator Economy</h3>
+                        <p class="feature-description">Monetize your knowledge and cultural expertise. From language tutoring to business consulting, turn your skills into income.</p>
+                    </article>
                     
-                    <button class="btn-secondary" onclick="loginWithGoogle()" aria-label="Continue with Google">
-                        <span aria-hidden="true">🔗</span> Continue with Google
-                    </button>
-                    
-                    <div class="auth-footer">
-                        <a href="/forgot-password">Forgot password?</a>
-                    </div>
-                    
-                    <p class="security-note">We never share your data. <a href="/privacy">Learn more</a>.</p>
+                    <article class="feature">
+                        <div class="feature-icon" role="img" aria-label="World globe emoji">🌍</div>
+                        <h3 class="feature-title">Cultural Intelligence</h3>
+                        <p class="feature-description">AI that understands African contexts, traditions, and social dynamics. Get relevant content and connections that matter to your experience.</p>
+                    </article>
                 </div>
-                
-                <!-- Signup Form -->
-                <div id="signupForm" class="auth-form" style="display: none;" role="tabpanel" aria-labelledby="signup-tab">
-                    <div class="auth-header">
-                        <h2>Join MyAfroSphere</h2>
-                        <p>Connect with your global community</p>
+            </section>
+
+            <section class="polymorphic-section" aria-labelledby="polymorphic-title">
+                <h2 id="polymorphic-title" class="section-title">One Platform, Many Experiences</h2>
+                <div class="mode-switcher" role="tablist">
+                    <button class="mode-tab active" role="tab" onclick="switchMode(this, 'forum')" aria-selected="true">Forum</button>
+                    <button class="mode-tab" role="tab" onclick="switchMode(this, 'social')" aria-selected="false">Social</button>
+                    <button class="mode-tab" role="tab" onclick="switchMode(this, 'network')" aria-selected="false">Professional</button>
+                    <button class="mode-tab" role="tab" onclick="switchMode(this, 'events')" aria-selected="false">Events</button>
+                </div>
+                <div class="interface-preview" role="tabpanel">
+                    <div class="preview-content" id="preview-content">
+                        <h3>Deep Discussions</h3>
+                        <p>Reddit-style conversations with African cultural context.<br>Voice comments, live audio rooms, and expert AMAs.</p>
                     </div>
-                    
-                    <form onsubmit="handleSignup(event)" novalidate>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="signup-firstname" class="sr-only">First name</label>
-                                <input type="text" id="signup-firstname" class="form-input" placeholder="First name" aria-describedby="firstNameError" required>
-                                <div class="error-message" id="firstNameError" role="alert"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="signup-lastname" class="sr-only">Last name</label>
-                                <input type="text" id="signup-lastname" class="form-input" placeholder="Last name" aria-describedby="lastNameError" required>
-                                <div class="error-message" id="lastNameError" role="alert"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="signup-email" class="sr-only">Email address</label>
-                            <input type="email" id="signup-email" class="form-input" placeholder="Email address" aria-describedby="emailError" required>
-                            <div class="error-message" id="emailError" role="alert"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="signup-password" class="sr-only">Create password</label>
-                            <input type="password" id="signup-password" class="form-input" placeholder="Create password" aria-describedby="passwordError" required minlength="8">
-                            <div class="error-message" id="passwordError" role="alert"></div>
-                        </div>
-                        <button type="submit" class="btn-primary" id="signupBtn">
-                            <span id="signupBtnText">Create Account</span>
-                        </button>
-                    </form>
-                    
-                    <div class="divider" aria-hidden="true">
-                        <span>or</span>
+                </div>
+            </section>
+
+            <section class="stats-section" aria-labelledby="stats-title">
+                <h2 id="stats-title" class="section-title">Growing Every Day</h2>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <div class="stat-number">54</div>
+                        <div class="stat-label">Countries</div>
                     </div>
-                    
-                    <button class="btn-secondary" onclick="signupWithGoogle()" aria-label="Continue with Google">
-                        <span aria-hidden="true">🔗</span> Continue with Google
-                    </button>
-                    
-                    <p class="security-note">By joining, you agree to our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>
+                    <div class="stat">
+                        <div class="stat-number">2.1M</div>
+                        <div class="stat-label">Members</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">850</div>
+                        <div class="stat-label">Communities</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">12K</div>
+                        <div class="stat-label">Events</div>
+                    </div>
                 </div>
             </section>
         </div>
     </main>
-    
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-banner" style="display: none;" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
-        <div>
-            <h3 id="cookie-title" class="sr-only">Cookie Consent</h3>
-            <p id="cookie-desc">We use cookies to enhance your experience. <a href="/privacy" style="color: var(--primary);">Learn more</a></p>
-        </div>
-        <div class="cookie-buttons">
-            <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
-            <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
-        </div>
-    </div>
-    
-    <!-- Screen Reader Only Content -->
-    <div class="sr-only">
-        <style>
-            .sr-only {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                padding: 0;
-                margin: -1px;
-                overflow: hidden;
-                clip: rect(0, 0, 0, 0);
-                white-space: nowrap;
-                border: 0;
-            }
-        </style>
-    </div>
-    
-    <script>
-        // Intersection Observer for lazy loading
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '50px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('loaded');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-        
-        // PWA Enhancements
-        let deferredPrompt;
-        
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            showInstallPrompt();
-        });
-        
-        function showInstallPrompt() {
-            const installBanner = document.createElement('div');
-            installBanner.id = 'install-banner';
-            installBanner.innerHTML = `
-                <div style="background: var(--primary); color: white; padding: 1rem; text-align: center; position: fixed; top: 0; left: 0; right: 0; z-index: 1001;">
-                    <p>Install MyAfroSphere for the best experience!</p>
-                    <button onclick="installApp()" style="background: white; color: var(--primary); border: none; padding: 0.5rem 1rem; border-radius: 0.5rem; margin: 0 0.5rem; cursor: pointer;">Install</button>
-                    <button onclick="dismissInstall()" style="background: transparent; color: white; border: 1px solid white; padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer;">Maybe Later</button>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="/communities">Browse Communities</a></li>
+                        <li><a href="/events">Find Events</a></li>
+                        <li><a href="/create-community">Start a Community</a></li>
+                        <li><a href="/mobile-app">Mobile App</a></li>
+                    </ul>
                 </div>
-            `;
-            document.body.insertBefore(installBanner, document.body.firstChild);
-        }
-        
-        window.installApp = async () => {
-            if (deferredPrompt) {
-                deferredPrompt.prompt();
-                const { outcome } = await deferredPrompt.userChoice;
-                console.log(`User response: ${outcome}`);
-                deferredPrompt = null;
-                dismissInstall();
-            }
-        };
-        
-        window.dismissInstall = () => {
-            const banner = document.getElementById('install-banner');
-            if (banner) banner.remove();
-        };
-        
-        // Offline Detection
-        window.addEventListener('online', () => {
-            document.getElementById('offline-notice').style.display = 'none';
-            showNotification('You\'re back online!', 'success');
-        });
-        
-        window.addEventListener('offline', () => {
-            document.getElementById('offline-notice').style.display = 'block';
-            showNotification('You\'re offline. Some features may not work.', 'warning');
-        });
-        
-        // Notification System
-        function showNotification(message, type = 'info') {
-            const notification = document.createElement('div');
-            notification.className = `notification notification-${type}`;
-            notification.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: var(--${type === 'success' ? 'primary' : type === 'warning' ? 'accent' : 'dark-bg'});
-                color: white;
-                padding: 1rem 1.5rem;
-                border-radius: 0.75rem;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-                z-index: 1002;
-                transform: translateX(400px);
-                transition: transform 0.3s ease;
-            `;
-            notification.textContent = message;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.style.transform = 'translateX(0)';
-            }, 100);
-            
-            setTimeout(() => {
-                notification.style.transform = 'translateX(400px)';
-                setTimeout(() => notification.remove(), 300);
-            }, 5000);
-        }
-        
-        // Service Worker Registration
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', async () => {
-                try {
-                    const registration = await navigator.serviceWorker.register('/sw.js');
-                    console.log('ServiceWorker registration successful');
-                    
-                    registration.addEventListener('updatefound', () => {
-                        const newWorker = registration.installing;
-                        newWorker.addEventListener('statechange', () => {
-                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                                showUpdateNotification();
-                            }
-                        });
-                    });
-                } catch (err) {
-                    console.log('ServiceWorker registration failed: ', err);
-                }
-            });
-        }
-        
-        function showUpdateNotification() {
-            const updateBanner = document.createElement('div');
-            updateBanner.innerHTML = `
-                <div style="background: var(--primary); color: white; padding: 1rem; text-align: center; position: fixed; bottom: 0; left: 0; right: 0; z-index: 1001;">
-                    <p>A new version is available!</p>
-                    <button onclick="window.location.reload()" style="background: white; color: var(--primary); border: none; padding: 0.5rem 1rem; border-radius: 0.5rem; margin: 0 0.5rem; cursor: pointer;">Update Now</button>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/help">Help Center</a></li>
+                        <li><a href="/community-guidelines">Community Guidelines</a></li>
+                    </ul>
                 </div>
-            `;
-            document.body.appendChild(updateBanner);
-        }
-        
-        // Language Selector
-        window.toggleLanguageDropdown = () => {
-            const dropdown = document.getElementById('languageDropdown');
-            const button = document.querySelector('.language-btn');
-            const isOpen = dropdown.classList.contains('show');
-            
-            dropdown.classList.toggle('show');
-            button.setAttribute('aria-expanded', !isOpen);
-            dropdown.setAttribute('aria-hidden', isOpen);
-            
-            if (!isOpen) {
-                setTimeout(() => {
-                    const firstOption = dropdown.querySelector('.language-option');
-                    if (firstOption) firstOption.focus();
-                }, 100);
-            }
-        };
-        
-        window.selectLanguage = (code, flag, name) => {
-            document.getElementById('currentLanguageFlag').textContent = flag;
-            document.getElementById('currentLanguageName').textContent = name;
-            
-            document.querySelectorAll('.language-option').forEach(option => {
-                option.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            
-            const dropdown = document.getElementById('languageDropdown');
-            const button = document.querySelector('.language-btn');
-            dropdown.classList.remove('show');
-            button.setAttribute('aria-expanded', 'false');
-            dropdown.setAttribute('aria-hidden', 'true');
-            
-            try {
-                sessionStorage.setItem('selectedLanguage', JSON.stringify({ code, flag, name }));
-            } catch (e) {
-                console.log('Cannot store language preference');
-            }
-            
-            showNotification(`Language changed to ${name}`, 'success');
-            console.log('Language changed to:', code);
-        };
-        
-        // Auth System
-        window.showAuthTab = (tab) => {
-            const loginForm = document.getElementById('loginForm');
-            const signupForm = document.getElementById('signupForm');
-            const loginTab = document.getElementById('login-tab');
-            const signupTab = document.getElementById('signup-tab');
-            
-            if (tab === 'login') {
-                loginForm.style.display = 'block';
-                signupForm.style.display = 'none';
-                loginTab.classList.add('active');
-                signupTab.classList.remove('active');
-                loginTab.setAttribute('aria-selected', 'true');
-                signupTab.setAttribute('aria-selected', 'false');
-                
-                setTimeout(() => {
-                    document.getElementById('login-email').focus();
-                }, 100);
-            } else {
-                loginForm.style.display = 'none';
-                signupForm.style.display = 'block';
-                loginTab.classList.remove('active');
-                signupTab.classList.add('active');
-                loginTab.setAttribute('aria-selected', 'false');
-                signupTab.setAttribute('aria-selected', 'true');
-                
-                setTimeout(() => {
-                    document.getElementById('signup-firstname').focus();
-                }, 100);
-            }
-        };
-        
-        // Form Validation
-        function validateEmail(email) {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(email);
-        }
-        
-        function validatePassword(password) {
-            return {
-                length: password.length >= 8,
-                hasUpper: /[A-Z]/.test(password),
-                hasLower: /[a-z]/.test(password),
-                hasNumber: /\d/.test(password),
-                hasSpecial: /[!@#$%^&*(),.?":{}|<>]/.test(password)
-            };
-        }
-        
-        function showError(field, message) {
-            const formGroup = field.closest('.form-group');
-            formGroup.classList.add('has-error');
-            const errorElement = formGroup.querySelector('.error-message');
-            errorElement.textContent = message;
-            field.setAttribute('aria-invalid', 'true');
-        }
-        
-        function clearError(field) {
-            const formGroup = field.closest('.form-group');
-            formGroup.classList.remove('has-error');
-            field.setAttribute('aria-invalid', 'false');
-        }
-        
-        function addRealTimeValidation() {
-            const inputs = document.querySelectorAll('.form-input');
-            inputs.forEach(input => {
-                input.addEventListener('blur', validateField);
-                input.addEventListener('input', () => {
-                    if (input.classList.contains('error')) {
-                        validateField.call(input);
-                    }
-                });
-            });
-        }
-        
-        function validateField() {
-            clearError(this);
-            
-            if (this.type === 'email' && this.value) {
-                if (!validateEmail(this.value)) {
-                    showError(this, 'Please enter a valid email address');
-                }
-            }
-            
-            if (this.type === 'password' && this.value) {
-                const validation = validatePassword(this.value);
-                if (!validation.length) {
-                    showError(this, 'Password must be at least 8 characters long');
-                }
-            }
-            
-            if (this.required && !this.value.trim()) {
-                showError(this, 'This field is required');
-            }
-        }
-        
-        // Form Handlers
-        window.handleLogin = async (e) => {
-            e.preventDefault();
-            const form = e.target;
-            const emailInput = form.querySelector('#login-email');
-            const passwordInput = form.querySelector('#login-password');
-            const btn = document.getElementById('loginBtn');
-            const btnText = document.getElementById('loginBtnText');
-            
-            clearError(emailInput);
-            clearError(passwordInput);
-            
-            let isValid = true;
-            
-            if (!emailInput.value) {
-                showError(emailInput, 'Email is required');
-                isValid = false;
-            } else if (!validateEmail(emailInput.value)) {
-                showError(emailInput, 'Please enter a valid email');
-                isValid = false;
-            }
-            
-            if (!passwordInput.value) {
-                showError(passwordInput, 'Password is required');
-                isValid = false;
-            } else if (passwordInput.value.length < 8) {
-                showError(passwordInput, 'Password must be 8+ characters');
-                isValid = false;
-            }
-            
-            if (!isValid) {
-                const firstError = form.querySelector('.has-error .form-input');
-                if (firstError) firstError.focus();
-                return;
-            }
-            
-            btn.classList.add('btn-loading');
-            btnText.textContent = '';
-            btn.disabled = true;
-            
-            try {
-                await new Promise(resolve => setTimeout(resolve, 1500));
-                showNotification('Login successful! Redirecting...', 'success');
-                setTimeout(() => {
-                    console.log('Redirecting to dashboard...');
-                }, 1000);
-            } catch (error) {
-                showNotification('Login failed. Please try again.', 'error');
-            } finally {
-                btn.classList.remove('btn-loading');
-                btnText.textContent = 'Log In';
-                btn.disabled = false;
-            }
-        };
-        
-        window.handleSignup = async (e) => {
-            e.preventDefault();
-            const form = e.target;
-            const btn = document.getElementById('signupBtn');
-            const btnText = document.getElementById('signupBtnText');
-            
-            form.querySelectorAll('.form-input').forEach(input => {
-                clearError(input);
-            });
-            
-            let isValid = true;
-            
-            const requiredFields = form.querySelectorAll('input[required]');
-            requiredFields.forEach(input => {
-                if (!input.value.trim()) {
-                    showError(input, 'This field is required');
-                    isValid = false;
-                }
-            });
-            
-            const emailInput = form.querySelector('#signup-email');
-            if (emailInput.value && !validateEmail(emailInput.value)) {
-                showError(emailInput, 'Please enter a valid email');
-                isValid = false;
-            }
-            
-            const passwordInput = form.querySelector('#signup-password');
-            if (passwordInput.value) {
-                const validation = validatePassword(passwordInput.value);
-                if (!validation.length) {
-                    showError(passwordInput, 'Password must be at least 8 characters');
-                    isValid = false;
-                }
-            }
-            
-            if (!isValid) {
-                const firstError = form.querySelector('.has-error .form-input');
-                if (firstError) firstError.focus();
-                return;
-            }
-            
-            btn.classList.add('btn-loading');
-            btnText.textContent = '';
-            btn.disabled = true;
-            
-            try {
-                await new Promise(resolve => setTimeout(resolve, 2000));
-                showNotification('Account created! Check your email to verify.', 'success');
-                setTimeout(() => {
-                    showAuthTab('login');
-                }, 1500);
-            } catch (error) {
-                showNotification('Signup failed. Please try again.', 'error');
-            } finally {
-                btn.classList.remove('btn-loading');
-                btnText.textContent = 'Create Account';
-                btn.disabled = false;
-            }
-        };
-        
-        // Social Login
-        window.loginWithGoogle = () => {
-            showNotification('Redirecting to Google login...', 'info');
-            setTimeout(() => {
-                console.log('Google OAuth initiated');
-            }, 500);
-        };
-        
-        window.signupWithGoogle = () => {
-            showNotification('Redirecting to Google signup...', 'info');
-            setTimeout(() => {
-                console.log('Google OAuth initiated');
-            }, 500);
-        };
-        
-        // Navigation
-        window.navigateToSubsphere = (country) => {
-            showNotification(`Ready to start the ${country} community?`, 'info');
-            window.location.href = `/create-community?country=${encodeURIComponent(country)}`;
-        };
-        
-        window.showAllCommunities = () => {
-            showNotification('Loading all communities...', 'info');
-            console.log('Opening communities directory');
-        };
-        
-        // Cookie Consent
-        function checkCookieConsent() {
-            try {
-                const consent = sessionStorage.getItem('cookieConsent');
-                if (!consent) {
-                    setTimeout(() => {
-                        document.getElementById('cookie-banner').style.display = 'flex';
-                    }, 2000);
-                }
-            } catch (e) {
-                document.getElementById('cookie-banner').style.display = 'flex';
-            }
-        }
-        
-        window.acceptCookies = () => {
-            try {
-                sessionStorage.setItem('cookieConsent', 'accepted');
-            } catch (e) {
-                console.log('Cannot store cookie consent');
-            }
-            document.getElementById('cookie-banner').style.display = 'none';
-            showNotification('Cookie preferences saved', 'success');
-        };
-        
-        window.declineCookies = () => {
-            try {
-                sessionStorage.setItem('cookieConsent', 'declined');
-            } catch (e) {
-                console.log('Cannot store cookie consent');
-            }
-            document.getElementById('cookie-banner').style.display = 'none';
-            showNotification('Only essential cookies will be used', 'info');
-        };
-        
-        // Keyboard Navigation
-        function enhanceKeyboardNavigation() {
-            const countryCards = document.querySelectorAll('.country-card');
-            countryCards.forEach((card, index) => {
-                card.addEventListener('keydown', (e) => {
-                    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                        e.preventDefault();
-                        const nextCard = countryCards[index + 1] || countryCards[0];
-                        nextCard.focus();
-                    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                        e.preventDefault();
-                        const prevCard = countryCards[index - 1] || countryCards[countryCards.length - 1];
-                        prevCard.focus();
-                    } else if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        card.click();
-                    }
-                });
-            });
-            
-            const subspheres = document.querySelectorAll('.subsphere');
-            subspheres.forEach(subsphere => {
-                subsphere.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        subsphere.click();
-                    }
-                });
-            });
-        }
-        
-        // Performance Monitoring
-        function initPerformanceMonitoring() {
-            if ('PerformanceObserver' in window) {
-                new PerformanceObserver((entryList) => {
-                    const entries = entryList.getEntries();
-                    const lastEntry = entries[entries.length - 1];
-                    console.log('LCP:', lastEntry.startTime);
-                }).observe({ type: 'largest-contentful-paint', buffered: true });
-                
-                new PerformanceObserver((entryList) => {
-                    const entries = entryList.getEntries();
-                    entries.forEach(entry => {
-                        console.log('FID:', entry.processingStart - entry.startTime);
-                    });
-                }).observe({ type: 'first-input', buffered: true });
-                
-                let clsValue = 0;
-                new PerformanceObserver((entryList) => {
-                    for (const entry of entryList.getEntries()) {
-                        if (!entry.hadRecentInput) {
-                            clsValue += entry.value;
-                            console.log('CLS:', clsValue);
-                        }
-                    }
-                }).observe({ type: 'layout-shift', buffered: true });
-            }
-        }
-        
-        // Privacy-Friendly Analytics
-        function trackEvent(event, data = {}) {
-            try {
-                const consent = sessionStorage.getItem('cookieConsent');
-                if (consent === 'accepted') {
-                    console.log('Event tracked:', event, data);
-                }
-            } catch (e) {
-                console.log('Analytics tracking disabled');
-            }
-        }
-        
-        // Initialization
-        document.addEventListener('DOMContentLoaded', async function() {
-            console.log('MyAfroSphere loading...');
-            
-            document.querySelectorAll('.lazy-load').forEach(el => {
-                observer.observe(el);
-            });
-            
-            addRealTimeValidation();
-            enhanceKeyboardNavigation();
-            initPerformanceMonitoring();
-            checkCookieConsent();
-            
-            try {
-                const savedLang = sessionStorage.getItem('selectedLanguage');
-                if (savedLang) {
-                    const { code, flag, name } = JSON.parse(savedLang);
-                    document.getElementById('currentLanguageFlag').textContent = flag;
-                    document.getElementById('currentLanguageName').textContent = name;
-                } else {
-                    const userLang = navigator.language || 'en';
-                    const langMap = {
-                        'fr': { code: 'fr', flag: '🇫🇷', name: 'Français' },
-                        'pt': { code: 'pt', flag: '🇵🇹', name: 'Portuguese' },
-                        'es': { code: 'es', flag: '🇪🇸', name: 'Spanish' },
-                        'ar': { code: 'ar', flag: '🇸🇦', name: 'Arabic' }
-                    };
-                    const langPrefix = userLang.split('-')[0];
-                    if (langMap[langPrefix]) {
-                        const lang = langMap[langPrefix];
-                        selectLanguage(lang.code, lang.flag, lang.name);
-                    }
-                }
-            } catch (e) {
-                console.log('Language detection failed');
-            }
-            
-            document.addEventListener('click', function(event) {
-                const dropdown = document.getElementById('languageDropdown');
-                const button = document.querySelector('.language-btn');
-                
-                if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-                    dropdown.classList.remove('show');
-                    button.setAttribute('aria-expanded', 'false');
-                    dropdown.setAttribute('aria-hidden', 'true');
-                }
-            });
-            
-            document.addEventListener('keydown', function(e) {
-                if (e.altKey && e.key === 'l') {
-                    e.preventDefault();
-                    document.querySelector('.language-btn').click();
-                }
-                
-                if (e.key === 'Escape') {
-                    const dropdown = document.getElementById('languageDropdown');
-                    if (dropdown.classList.contains('show')) {
-                        toggleLanguageDropdown();
-                    }
-                }
-            });
-            
-            trackEvent('page_load', {
-                timestamp: Date.now(),
-                userAgent: navigator.userAgent,
-                language: navigator.language
-            });
-            
-            console.log('MyAfroSphere loaded successfully!');
-        });
-        
-        // Error Handling
-        window.addEventListener('error', function(e) {
-            console.error('JavaScript error:', e.error);
-            showNotification('Something went wrong. Please refresh the page.', 'error');
-        });
-        
-        window.addEventListener('unhandledrejection', function(e) {
-            console.error('Unhandled promise rejection:', e.reason);
-            showNotification('Network error. Please check your connection.', 'error');
-        });
-    </script>
-</body>
-</html>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="https://twitter.com/myafrosphere" target="_blank" rel="noopener">Twitter</a></li>
+                        <li><a href="https://instagram.com/myafrosphere" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://linkedin.com/company/myafrosphere" target="_blank" rel="noopener">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>

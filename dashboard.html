@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - MyAfroSphere</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .dashboard {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .logout-btn {
+            background: var(--error);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>🎉 Welcome to MyAfroSphere!</h1>
+        <p>You're now logged in. This is your dashboard.</p>
+        <button onclick="signOut()" class="logout-btn">Sign Out</button>
+    </div>
+
+    <script>
+        // Reuse Supabase client
+        const supabaseUrl = 'https://your-project.supabase.co';
+        const supabaseAnonKey = 'your-anon-key';
+        const { createClient } = supabase;
+        const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+        async function signOut() {
+            const { error } = await supabase.auth.signOut();
+            if (error) {
+                console.error('Error signing out:', error);
+            } else {
+                window.location.href = '/';
+            }
+        }
+    </script>
+</body>
+</html>

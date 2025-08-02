@@ -63,11 +63,11 @@ function switchToSignin() {
 // === AUTH HELPERS ===
 async function checkUser() {
     if (!window.supabase) {
-        console.log("Supabase not ready yet. Skipping auth check.");
+        console.log("Supabase not ready yet.");
         return;
     }
     try {
-        const { data: { user }, error } = await supabase.auth.getUser();
+        const {  { user }, error } = await supabase.auth.getUser();
         if (error) throw error;
         updateAuthUI(user);
     } catch (error) {
@@ -78,15 +78,18 @@ async function checkUser() {
 
 function updateAuthUI(user) {
     const authButtons = document.querySelector('.auth-buttons');
-    const loginBtn = document.querySelector('.login-btn');
-    const ctaNav = document.querySelector('.cta-nav');
-
     if (!authButtons) return;
 
-    authButtons.innerHTML = ''; // Clear
+    // Clear existing buttons
+    authButtons.innerHTML = '';
 
     if (user) {
-        // Show sign out
+        // User is logged in
+        const profileLink = document.createElement('a');
+        profileLink.href = '/dashboard.html';
+        profileLink.className = 'cta-nav';
+        profileLink.textContent = 'Dashboard';
+
         const signOutBtn = document.createElement('a');
         signOutBtn.href = '#';
         signOutBtn.className = 'login-btn';
@@ -98,15 +101,10 @@ function updateAuthUI(user) {
             window.location.href = '/';
         };
 
-        const profileLink = document.createElement('a');
-        profileLink.href = '/profile.html';
-        profileLink.className = 'cta-nav';
-        profileLink.textContent = 'Profile';
-
         authButtons.appendChild(profileLink);
         authButtons.appendChild(signOutBtn);
     } else {
-        // Show sign in / sign up
+        // User is not logged in
         const signInBtn = document.createElement('a');
         signInBtn.href = '#';
         signInBtn.className = 'login-btn';
@@ -181,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     email,
                     password,
                     options: {
-                        data: {
+                         {
                             full_name: fullName,
                             username: username
                         }
@@ -198,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (insertError) console.error('User insert error:', insertError);
 
                     message.style.color = 'var(--success)';
-                    message.textContent = `Welcome, ${firstName}! Check your email to confirm your account.`;
+                    message.textContent = `Welcome, ${firstName}! Check your email to confirm.`;
                     setTimeout(() => {
                         closeModal('signupModal');
                     }, 2000);
@@ -274,7 +272,15 @@ document.addEventListener('DOMContentLoaded', function () {
             try {
                 window.supabase = supabase.createClient(supabaseUrl, supabaseAnonKey);
                 console.log("✅ Supabase client loaded");
-                checkUser(); // ← Run after Supabase is ready
+                // Start auth listener
+                supabase.auth.onAuthStateChange((event, session) => {
+                    console.log('Auth state changed:', event);
+                    if (event === 'SIGNED_IN' || event === 'SIGNED_OUT') {
+                        checkUser();
+                    }
+                });
+                // Check current session
+                checkUser();
             } catch (error) {
                 console.error("Failed to create Supabase client:", error);
             }

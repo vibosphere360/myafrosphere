@@ -65,24 +65,81 @@ document.addEventListener('DOMContentLoaded', function () {
     // Handle Sign In Form
     const signinForm = document.getElementById('signinForm');
     if (signinForm) {
-        signinForm.addEventListener('submit', function (e) {
+        signinForm.addEventListener('submit', async function (e) {
             e.preventDefault();
             const email = document.getElementById('signinEmail').value;
             const password = document.getElementById('signinPassword').value;
-            alert(`Signing in as ${email}`);
-            closeModal('signinModal');
+            const message = document.getElementById('signinMessage') || createMessageElement('signinForm');
+
+            try {
+                const { data, error } = await supabase.auth.signInWithPassword({
+                    email,
+                    password
+                });
+
+                if (error) throw error;
+
+                if (data.user) {
+                    message.style.color = 'var(--success)';
+                    message.textContent = 'Signed in successfully! Redirecting...';
+                    setTimeout(() => {
+                        window.location.href = '/dashboard.html'; // Or update UI
+                    }, 1000);
+                }
+            } catch (error) {
+                message.style.color = 'var(--error)';
+                message.textContent = error.message;
+            }
         });
     }
 
     // Handle Sign Up Form
     const signupForm = document.getElementById('signupForm');
     if (signupForm) {
-        signupForm.addEventListener('submit', function (e) {
+        signupForm.addEventListener('submit', async function (e) {
             e.preventDefault();
             const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
             const email = document.getElementById('signupEmail').value;
-            alert(`Welcome, ${firstName}! Your account has been created.`);
-            closeModal('signupModal');
+            const password = document.getElementById('signupPassword').value;
+            const fullName = `${firstName} ${lastName}`.trim();
+            const username = generateUsername(firstName, lastName);
+            const message = document.getElementById('signupMessage') || createMessageElement('signupForm');
+
+            try {
+                const { data, error } = await supabase.auth.signUp({
+                    email,
+                    password,
+                    options: {
+                        data: {
+                            full_name: fullName,
+                            username: username
+                        }
+                    }
+                });
+
+                if (error) throw error;
+
+                if (data.user) {
+                    // Insert into public users table
+                    const { error: insertError } = await supabase
+                        .from('users')
+                        .insert([
+                            { id: data.user.id, username, email, full_name: fullName }
+                        ]);
+
+                    if (insertError) console.error('User insert error:', insertError);
+
+                    message.style.color = 'var(--success)';
+                    message.textContent = `Welcome, ${firstName}! Check your email to confirm your account.`;
+                    setTimeout(() => {
+                        closeModal('signupModal');
+                    }, 2000);
+                }
+            } catch (error) {
+                message.style.color = 'var(--error)';
+                message.textContent = error.message;
+            }
         });
     }
 
@@ -150,6 +207,18 @@ document.addEventListener('DOMContentLoaded', function () {
             try {
                 window.supabase = supabase.createClient(supabaseUrl, supabaseAnonKey);
                 console.log("✅ Supabase client loaded");
+                
+                // Check auth state
+                supabase.auth.onAuthStateChange((event, session) => {
+                    console.log('Auth state changed:', event);
+                    if (event === 'SIGNED_IN') {
+                        // User signed in
+                        console.log('User signed in:', session.user);
+                    } else if (event === 'SIGNED_OUT') {
+                        // User signed out
+                        console.log('User signed out');
+                    }
+                });
             } catch (error) {
                 console.error("Failed to create Supabase client:", error);
             }
@@ -158,6 +227,21 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error("Failed to load Supabase SDK");
         };
         document.head.appendChild(script);
+    }
+
+    // === HELPERS ===
+    function createMessageElement(formId) {
+        const message = document.createElement('p');
+        message.id = formId === 'signinForm' ? 'signinMessage' : 'signupMessage';
+        message.style.marginTop = '10px';
+        message.style.fontSize = '14px';
+        document.getElementById(formId).appendChild(message);
+        return message;
+    }
+
+    function generateUsername(firstName, lastName) {
+        const base = (firstName + lastName).toLowerCase().replace(/[^a-z]/g, '');
+        return base.length >= 4 ? base : base + Math.floor(100 + Math.random() * 900);
     }
 
     // === INITIALIZATION ===
@@ -177,4 +261,19 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.modal.show').forEach(modal => closeModal(modal.id));
         }
     });
+
+    // Check if user is already logged in
+    async function checkAuthState() {
+        if (window.supabase) {
+            const { data: { user } } = await supabase.auth.getUser();
+            if (user) {
+                // User is logged in - update UI accordingly
+                console.log('User already logged in:', user);
+                // Example: Hide sign-in button, show profile button
+            }
+        }
+    }
+    
+    // Run auth check after Supabase is loaded
+    setTimeout(checkAuthState, 1000);
 });

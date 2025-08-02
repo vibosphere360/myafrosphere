@@ -151,3 +151,29 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+// Safely load env vars (works even without Vite)
+const getEnv = (key, fallback) => {
+  return (typeof import !== 'undefined' && import.meta.env?.[key]) ||
+         (typeof process !== 'undefined' && process.env[key]) ||
+         fallback;
+};
+
+const supabaseUrl = getEnv('VITE_SUPABASE_URL', 'https://your-project.supabase.co');
+const supabaseAnonKey = getEnv('VITE_SUPABASE_ANON_KEY', 'your-anon-key');
+
+// Load Supabase SDK (add this to your HTML <head>)
+if (!window.supabase) {
+  const script = document.createElement('script');
+  script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
+  script.onload = () => {
+    window.supabase = supabase.createClient(supabaseUrl, supabaseAnonKey);
+    console.log("Supabase client ready");
+  };
+  document.head.appendChild(script);
+};
+function shareToSocial() {
+  const text = "I'm on MyAfroSphere – the real African community network. Join me in s/brainhealth: ";
+  const url = "https://2ce85d2d.myafrosphere.pages.dev/";
+  const tweet = encodeURIComponent(text + url);
+  window.open(`https://twitter.com/intent/tweet?text=${tweet}`, '_blank');
+}

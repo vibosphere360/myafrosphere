@@ -23,8 +23,8 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@myafrosphere">
-    <meta name="twitter:creator" content="@myafrosphere">
+    <meta name="twitter:site" content="@vibosphere">
+    <meta name="twitter:creator" content="@vibosphere">
     <meta property="twitter:title" content="MyAfroSphere - Connect with African Communities Worldwide">
     <meta property="twitter:description" content="Join 0M members in 0+ African diaspora communities. Cultural discussions, professional networking & local events.">
     <meta property="twitter:image" content="assets/twitter-card.jpg">
@@ -73,7 +73,7 @@
         "url": "https://myafrosphere.com"
       },
       "sameAs": [
-        "https://twitter.com/myafrosphere",
+        "https://twitter.com/vibosphere        
         "https://facebook.com/myafrosphere",
         "https://instagram.com/myafrosphere",
         "https://linkedin.com/company/myafrosphere"
@@ -252,19 +252,39 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Platform</h4>
-                    <ul><li><a href="/communities">Browse Communities</a></li><li><a href="/events">Find Events</a></li><li><a href="/create-community">Start a Community</a></li><li><a href="/mobile-app">Mobile App</a></li></ul>
+                    <ul>
+                        <li><a href="/communities">Browse Communities</a></li>
+                        <li><a href="/events">Find Events</a></li>
+                        <li><a href="/create-community">Start a Community</a></li>
+                        <li><a href="/mobile-app">Mobile App</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Resources</h4>
-                    <ul><li><a href="/about">About Us</a></li><li><a href="/blog">Blog</a></li><li><a href="/help">Help Center</a></li><li><a href="/community-guidelines">Community Guidelines</a></li></ul>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/help">Help Center</a></li>
+                        <li><a href="/community-guidelines">Community Guidelines</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Connect</h4>
-                    <ul><li><a href="/contact">Contact Us</a></li><li><a href="https://twitter.com/myafrosphere">Twitter</a></li><li><a href="https://instagram.com/myafrosphere">Instagram</a></li><li><a href="https://linkedin.com/company/myafrosphere">LinkedIn</a></li></ul>
+                    <ul>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="https://twitter.com/vibosphere">Twitter</a></li>
+                        <li><a href="https://instagram.com/myafrosphere">Instagram</a></li>
+                        <li><a href="https://linkedin.com/company/myafrosphere">LinkedIn</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Legal</h4>
-                    <ul><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li><li><a href="/cookie-policy">Cookie Policy</a></li><li><a href="/gdpr">GDPR Compliance</a></li></ul>
+                    <ul>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/cookie-policy">Cookie Policy</a></li>
+                        <li><a href="/gdpr">GDPR Compliance</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -279,8 +299,97 @@
         </div>
     </footer>
 
-    <!-- Modals -->
-    <include src="partials/modals.html"></include>
+    <!-- ================================== -->
+    <!--            MODALS (Dialogs)        -->
+    <!-- ================================== -->
+
+    <!-- Sign In Modal -->
+    <div class="modal" id="signinModal" role="dialog" aria-modal="true" aria-labelledby="signinModalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('signinModal')" aria-label="Close sign-in modal">&times;</button>
+            <h2 id="signinModalTitle" class="modal-title">Welcome Back</h2>
+            <p class="modal-subtitle">Sign in to your MyAfroSphere account</p>
+            <form id="signinForm" method="post">
+                <div class="form-group">
+                    <label for="signinEmail" class="form-label">Email Address</label>
+                    <input type="email" id="signinEmail" class="form-input" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="signinPassword" class="form-label">Password</label>
+                    <input type="password" id="signinPassword" class="form-input" placeholder="••••••••" required>
+                </div>
+                <div class="form-checkbox">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                <button type="submit" class="auth-button">Sign In</button>
+            </form>
+            <div class="divider"><span>or</span></div>
+            <div class="social-buttons">
+                <a href="#" class="social-button">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M19.8055 10.2303C19.8055 9.55056 19.7491 8.86711 19.6274 8.19836H10.2002V12.0492H15.6016C15.3774 13.2911 14.6587 14.3898 13.6037 15.0879V17.5866H16.8255C18.7177 15.8449 19.8055 13.2728 19.8055 10.2303Z" fill="#4285F4"/>
+                        <path d="M10.2002 20.0006C12.897 20.0006 15.1714 19.1151 16.8286 17.5865L13.6067 15.0879C12.7096 15.6979 11.5521 16.0433 10.2032 16.0433C7.59432 16.0433 5.38238 14.2832 4.58903 11.9169H1.26367V14.4927C2.96115 17.8695 6.4186 20.0006 10.2002 20.0006Z" fill="#34A853"/>
+                        <path d="M4.58583 11.9169C4.16667 10.6749 4.16667 9.33008 4.58583 8.08811V5.51233H1.26365C-0.154291 8.33798 -0.154291 11.667 1.26365 14.4927L4.58583 11.9169Z" fill="#FBBC04"/>
+                        <path d="M10.2002 3.95805C11.6256 3.936 13.0034 4.47247 14.036 5.45722L16.891 2.60218C15.0831 0.904599 12.6838 -0.0287217 10.2002 0.000673888C6.4186 0.000673888 2.96115 2.13185 1.26367 5.51234L4.58585 8.08813C5.3759 5.71811 7.59204 3.95805 10.2002 3.95805Z" fill="#EA4335"/>
+                    </svg>
+                    Continue with Google
+                </a>
+            </div>
+            <p class="modal-switch">Don't have an account? <a href="#" onclick="switchToSignup()">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal" role="dialog" aria-modal="true" aria-labelledby="signupModalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('signupModal')" aria-label="Close signup modal">&times;</button>
+            <h2 id="signupModalTitle" class="modal-title">Join MyAfroSphere</h2>
+            <p class="modal-subtitle">Create your free account</p>
+            <form id="signupForm" method="post">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" id="firstName" class="form-input" placeholder="First" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" id="lastName" class="form-input" placeholder="Last" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail" class="form-label">Email Address</label>
+                    <input type="email" id="signupEmail" class="form-input" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword" class="form-label">Password</label>
+                    <input type="password" id="signupPassword" class="form-input" placeholder="••••••••" required minlength="8">
+                </div>
+                <div class="form-checkbox">
+                    <input type="checkbox" id="termsAgree" required>
+                    <label for="termsAgree">I agree to the <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a></label>
+                </div>
+                <div class="form-checkbox">
+                    <input type="checkbox" id="newsletter">
+                    <label for="newsletter">Subscribe to our newsletter</label>
+                </div>
+                <button type="submit" class="auth-button">Create Account</button>
+            </form>
+            <div class="divider"><span>or</span></div>
+            <div class="social-buttons">
+                <a href="#" class="social-button">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M19.8055 10.2303C19.8055 9.55056 19.7491 8.86711 19.6274 8.19836H10.2002V12.0492H15.6016C15.3774 13.2911 14.6587 14.3898 13.6037 15.0879V17.5866H16.8255C18.7177 15.8449 19.8055 13.2728 19.8055 10.2303Z" fill="#4285F4"/>
+                        <path d="M10.2002 20.0006C12.897 20.0006 15.1714 19.1151 16.8286 17.5865L13.6067 15.0879C12.7096 15.6979 11.5521 16.0433 10.2032 16.0433C7.59432 16.0433 5.38238 14.2832 4.58903 11.9169H1.26367V14.4927C2.96115 17.8695 6.4186 20.0006 10.2002 20.0006Z" fill="#34A853"/>
+                        <path d="M4.58583 11.9169C4.16667 10.6749 4.16667 9.33008 4.58583 8.08811V5.51233H1.26365C-0.154291 8.33798 -0.154291 11.667 1.26365 14.4927L4.58583 11.9169Z" fill="#FBBC04"/>
+                        <path d="M10.2002 3.95805C11.6256 3.936 13.0034 4.47247 14.036 5.45722L16.891 2.60218C15.0831 0.904599 12.6838 -0.0287217 10.2002 0.000673888C6.4186 0.000673888 2.96115 2.13185 1.26367 5.51234L4.58585 8.08813C5.3759 5.71811 7.59204 3.95805 10.2002 3.95805Z" fill="#EA4335"/>
+                    </svg>
+                    Continue with Google
+                </a>
+            </div>
+            <p class="modal-switch">Already have an account? <a href="#" onclick="switchToSignin()">Sign in</a></p>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="js/scripts.js"></script>

@@ -80,11 +80,9 @@ function updateAuthUI(user) {
     const authButtons = document.querySelector('.auth-buttons');
     if (!authButtons) return;
 
-    // Clear existing buttons
     authButtons.innerHTML = '';
 
     if (user) {
-        // User is logged in
         const profileLink = document.createElement('a');
         profileLink.href = '/dashboard.html';
         profileLink.className = 'cta-nav';
@@ -104,7 +102,6 @@ function updateAuthUI(user) {
         authButtons.appendChild(profileLink);
         authButtons.appendChild(signOutBtn);
     } else {
-        // User is not logged in
         const signInBtn = document.createElement('a');
         signInBtn.href = '#';
         signInBtn.className = 'login-btn';
@@ -133,11 +130,25 @@ document.addEventListener('DOMContentLoaded', function () {
     // Handle Sign In Form
     const signinForm = document.getElementById('signinForm');
     if (signinForm) {
+        if (!document.getElementById('signinMessage')) {
+            const msg = document.createElement('p');
+            msg.id = 'signinMessage';
+            msg.style.marginTop = '10px';
+            msg.style.fontSize = '14px';
+            signinForm.appendChild(msg);
+        }
+
         signinForm.addEventListener('submit', async function (e) {
             e.preventDefault();
             const email = document.getElementById('signinEmail').value;
             const password = document.getElementById('signinPassword').value;
-            const message = document.getElementById('signinMessage') || createMessageElement('signinForm');
+            const message = document.getElementById('signinMessage');
+
+            if (!window.supabase) {
+                message.style.color = 'var(--error)';
+                message.textContent = 'Auth system not ready.';
+                return;
+            }
 
             try {
                 const { data, error } = await supabase.auth.signInWithPassword({
@@ -147,13 +158,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (error) throw error;
 
-                if (data.user) {
-                    message.style.color = 'var(--success)';
-                    message.textContent = 'Signed in successfully!';
-                    setTimeout(() => {
-                        window.location.href = '/dashboard.html';
-                    }, 1000);
-                }
+                message.style.color = 'var(--success)';
+                message.textContent = 'Signed in successfully!';
+                setTimeout(() => {
+                    window.location.href = '/dashboard.html';
+                }, 1000);
             } catch (error) {
                 message.style.color = 'var(--error)';
                 message.textContent = error.message;
@@ -164,6 +173,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Handle Sign Up Form
     const signupForm = document.getElementById('signupForm');
     if (signupForm) {
+        if (!document.getElementById('signupMessage')) {
+            const msg = document.createElement('p');
+            msg.id = 'signupMessage';
+            msg.style.marginTop = '10px';
+            msg.style.fontSize = '14px';
+            signupForm.appendChild(msg);
+        }
+
         signupForm.addEventListener('submit', async function (e) {
             e.preventDefault();
             const firstName = document.getElementById('firstName').value;
@@ -172,7 +189,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const password = document.getElementById('signupPassword').value;
             const fullName = `${firstName} ${lastName}`.trim();
             const username = generateUsername(firstName, lastName);
-            const message = document.getElementById('signupMessage') || createMessageElement('signupForm');
+            const message = document.getElementById('signupMessage');
+
+            if (!window.supabase) {
+                message.style.color = 'var(--error)';
+                message.textContent = 'Auth system not ready.';
+                return;
+            }
 
             try {
                 const { data, error } = await supabase.auth.signUp({
@@ -193,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         .from('users')
                         .insert([{ id: data.user.id, username, email, full_name: fullName }]);
 
-                    if (insertError) console.error('User insert error:', insertError);
+                    if (insertError) console.error('Insert error:', insertError);
 
                     message.style.color = 'var(--success)';
                     message.textContent = `Welcome, ${firstName}! Check your email to confirm.`;
@@ -270,19 +293,23 @@ document.addEventListener('DOMContentLoaded', function () {
         script.async = true;
         script.onload = () => {
             try {
-                window.supabase = supabase.createClient(supabaseUrl, supabaseAnonKey);
+                // ✅ Fix: Use createClient from the SDK
+                const { createClient } = window.supabase;
+                window.supabase = createClient(supabaseUrl, supabaseAnonKey);
                 console.log("✅ Supabase client loaded");
+
                 // Start auth listener
                 supabase.auth.onAuthStateChange((event, session) => {
-                    console.log('Auth state changed:', event);
+                    console.log('Auth state:', event);
                     if (event === 'SIGNED_IN' || event === 'SIGNED_OUT') {
                         checkUser();
                     }
                 });
+
                 // Check current session
                 checkUser();
             } catch (error) {
-                console.error("Failed to create Supabase client:", error);
+                console.error("Failed to initialize Supabase:", error);
             }
         };
         script.onerror = () => {
@@ -317,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Close modals with Escape key
+    // Escape key
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape') {
             document.querySelectorAll('.modal.show').forEach(modal => closeModal(modal.id));

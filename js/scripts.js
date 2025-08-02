@@ -3,37 +3,28 @@ let analyticsInitialized = false;
 
 function initAnalytics() {
     if (analyticsInitialized) return;
-    // Placeholder for Google Analytics
     console.log("Analytics initialized");
-    // Uncomment below and replace G-XXXXXXXXXX when ready
-    /*
-    const script = document.createElement('script');
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
-    script.async = true;
-    document.head.appendChild(script);
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-    */
     analyticsInitialized = true;
 }
 
 function acceptCookies() {
     localStorage.setItem('cookieConsent', 'accepted');
-    document.getElementById('cookieBanner').style.display = 'none';
+    const banner = document.getElementById('cookieBanner');
+    if (banner) banner.style.display = 'none';
     initAnalytics();
 }
 
 function declineCookies() {
     localStorage.setItem('cookieConsent', 'declined');
-    document.getElementById('cookieBanner').style.display = 'none';
+    const banner = document.getElementById('cookieBanner');
+    if (banner) banner.style.display = 'none';
 }
 
 function checkCookieConsent() {
     const consent = localStorage.getItem('cookieConsent');
-    if (!consent) {
-        document.getElementById('cookieBanner').style.display = 'block';
+    const banner = document.getElementById('cookieBanner');
+    if (!consent && banner) {
+        banner.style.display = 'block';
     } else if (consent === 'accepted') {
         initAnalytics();
     }
@@ -45,7 +36,6 @@ function openModal(modalId) {
     if (modal) {
         modal.classList.add('show');
         document.body.style.overflow = 'hidden';
-        // Track event
         if (window.gtag) {
             gtag('event', modalId === 'signinModal' ? 'sign_in_modal_open' : 'signup_modal_open');
         }
@@ -79,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
             const email = document.getElementById('signinEmail').value;
             const password = document.getElementById('signinPassword').value;
-            // Simulate login
             alert(`Signing in as ${email}`);
             closeModal('signinModal');
         });
@@ -91,10 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         signupForm.addEventListener('submit', function (e) {
             e.preventDefault();
             const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
             const email = document.getElementById('signupEmail').value;
-            const password = document.getElementById('signupPassword').value;
-            // Simulate signup
             alert(`Welcome, ${firstName}! Your account has been created.`);
             closeModal('signupModal');
         });
@@ -133,6 +119,47 @@ document.addEventListener('DOMContentLoaded', function () {
         content.innerHTML = `<h3>${data[mode].h3}</h3><p>${data[mode].p}</p>`;
     };
 
+    // === SHARE FUNCTIONS ===
+    window.shareToX = function() {
+        const text = "I'm on MyAfroSphere – the real African community network. Join me in s/brainhealth: ";
+        const url = "https://2ce85d2d.myafrosphere.pages.dev/";
+        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text + url)}`, '_blank');
+    };
+
+    window.shareToWhatsApp = function() {
+        const text = "I'm on MyAfroSphere – the real African community network. Join me in s/brainhealth: ";
+        const url = "https://2ce85d2d.myafrosphere.pages.dev/";
+        window.open(`https://wa.me/?text=${encodeURIComponent(text + url)}`, '_blank');
+    };
+
+    // === SUPABASE CLIENT SETUP ===
+    const getEnv = (key, fallback) => {
+        return (typeof import !== 'undefined' && import.meta.env?.[key]) ||
+               (typeof process !== 'undefined' && process.env?.[key]) ||
+               fallback;
+    };
+
+    const supabaseUrl = getEnv('VITE_SUPABASE_URL', 'https://your-project.supabase.co').trim();
+    const supabaseAnonKey = getEnv('VITE_SUPABASE_ANON_KEY', 'your-anon-key').trim();
+
+    if (!window.supabase) {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
+        script.async = true;
+        script.onload = () => {
+            try {
+                window.supabase = supabase.createClient(supabaseUrl, supabaseAnonKey);
+                console.log("✅ Supabase client loaded");
+            } catch (error) {
+                console.error("Failed to create Supabase client:", error);
+            }
+        };
+        script.onerror = () => {
+            console.error("Failed to load Supabase SDK");
+        };
+        document.head.appendChild(script);
+    }
+
     // === INITIALIZATION ===
     checkCookieConsent();
     loadCommunities();
@@ -151,29 +178,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-// Safely load env vars (works even without Vite)
-const getEnv = (key, fallback) => {
-  return (typeof import !== 'undefined' && import.meta.env?.[key]) ||
-         (typeof process !== 'undefined' && process.env[key]) ||
-         fallback;
-};
-
-const supabaseUrl = getEnv('VITE_SUPABASE_URL', 'https://your-project.supabase.co');
-const supabaseAnonKey = getEnv('VITE_SUPABASE_ANON_KEY', 'your-anon-key');
-
-// Load Supabase SDK (add this to your HTML <head>)
-if (!window.supabase) {
-  const script = document.createElement('script');
-  script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
-  script.onload = () => {
-    window.supabase = supabase.createClient(supabaseUrl, supabaseAnonKey);
-    console.log("Supabase client ready");
-  };
-  document.head.appendChild(script);
-};
-function shareToSocial() {
-  const text = "I'm on MyAfroSphere – the real African community network. Join me in s/brainhealth: ";
-  const url = "https://2ce85d2d.myafrosphere.pages.dev/";
-  const tweet = encodeURIComponent(text + url);
-  window.open(`https://twitter.com/intent/tweet?text=${tweet}`, '_blank');
-}

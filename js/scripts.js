@@ -60,6 +60,76 @@ function switchToSignin() {
     openModal('signinModal');
 }
 
+// === AUTH HELPERS ===
+async function checkUser() {
+    if (!window.supabase) {
+        console.log("Supabase not ready yet. Skipping auth check.");
+        return;
+    }
+    try {
+        const { data: { user }, error } = await supabase.auth.getUser();
+        if (error) throw error;
+        updateAuthUI(user);
+    } catch (error) {
+        console.error('Error checking user:', error);
+        updateAuthUI(null);
+    }
+}
+
+function updateAuthUI(user) {
+    const authButtons = document.querySelector('.auth-buttons');
+    const loginBtn = document.querySelector('.login-btn');
+    const ctaNav = document.querySelector('.cta-nav');
+
+    if (!authButtons) return;
+
+    authButtons.innerHTML = ''; // Clear
+
+    if (user) {
+        // Show sign out
+        const signOutBtn = document.createElement('a');
+        signOutBtn.href = '#';
+        signOutBtn.className = 'login-btn';
+        signOutBtn.textContent = 'Sign Out';
+        signOutBtn.onclick = async (e) => {
+            e.preventDefault();
+            await supabase.auth.signOut();
+            updateAuthUI(null);
+            window.location.href = '/';
+        };
+
+        const profileLink = document.createElement('a');
+        profileLink.href = '/profile.html';
+        profileLink.className = 'cta-nav';
+        profileLink.textContent = 'Profile';
+
+        authButtons.appendChild(profileLink);
+        authButtons.appendChild(signOutBtn);
+    } else {
+        // Show sign in / sign up
+        const signInBtn = document.createElement('a');
+        signInBtn.href = '#';
+        signInBtn.className = 'login-btn';
+        signInBtn.textContent = 'Sign In';
+        signInBtn.onclick = (e) => {
+            e.preventDefault();
+            openModal('signinModal');
+        };
+
+        const signUpBtn = document.createElement('a');
+        signUpBtn.href = '#';
+        signUpBtn.className = 'cta-nav';
+        signUpBtn.textContent = 'Sign Up';
+        signUpBtn.onclick = (e) => {
+            e.preventDefault();
+            openModal('signupModal');
+        };
+
+        authButtons.appendChild(signInBtn);
+        authButtons.appendChild(signUpBtn);
+    }
+}
+
 // === FORM HANDLING ===
 document.addEventListener('DOMContentLoaded', function () {
     // Handle Sign In Form
@@ -81,9 +151,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (data.user) {
                     message.style.color = 'var(--success)';
-                    message.textContent = 'Signed in successfully! Redirecting...';
+                    message.textContent = 'Signed in successfully!';
                     setTimeout(() => {
-                        window.location.href = '/dashboard.html'; // Or update UI
+                        window.location.href = '/dashboard.html';
                     }, 1000);
                 }
             } catch (error) {
@@ -121,12 +191,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (error) throw error;
 
                 if (data.user) {
-                    // Insert into public users table
                     const { error: insertError } = await supabase
                         .from('users')
-                        .insert([
-                            { id: data.user.id, username, email, full_name: fullName }
-                        ]);
+                        .insert([{ id: data.user.id, username, email, full_name: fullName }]);
 
                     if (insertError) console.error('User insert error:', insertError);
 
@@ -207,18 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
             try {
                 window.supabase = supabase.createClient(supabaseUrl, supabaseAnonKey);
                 console.log("✅ Supabase client loaded");
-                
-                // Check auth state
-                supabase.auth.onAuthStateChange((event, session) => {
-                    console.log('Auth state changed:', event);
-                    if (event === 'SIGNED_IN') {
-                        // User signed in
-                        console.log('User signed in:', session.user);
-                    } else if (event === 'SIGNED_OUT') {
-                        // User signed out
-                        console.log('User signed out');
-                    }
-                });
+                checkUser(); // ← Run after Supabase is ready
             } catch (error) {
                 console.error("Failed to create Supabase client:", error);
             }
@@ -261,19 +317,4 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.modal.show').forEach(modal => closeModal(modal.id));
         }
     });
-
-    // Check if user is already logged in
-    async function checkAuthState() {
-        if (window.supabase) {
-            const { data: { user } } = await supabase.auth.getUser();
-            if (user) {
-                // User is logged in - update UI accordingly
-                console.log('User already logged in:', user);
-                // Example: Hide sign-in button, show profile button
-            }
-        }
-    }
-    
-    // Run auth check after Supabase is loaded
-    setTimeout(checkAuthState, 1000);
 });

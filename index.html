@@ -55,8 +55,8 @@
                     <li><a href="#about">About</a></li>
                 </ul>
                 <div class="auth-buttons">
-                    <a href="#" onclick="openModal('signinModal')" class="login-btn">Sign In</a>
-                    <a href="#" onclick="openModal('signupModal')" class="cta-nav">Sign Up</a>
+                    <a href="#" class="login-btn">Sign In</a>
+                    <a href="#" class="cta-nav">Sign Up</a>
                 </div>
             </nav>
         </div>
@@ -69,8 +69,8 @@
                 <h1><span class="logo-text">myAfroSphere</span><br>Beyond Borders. Within Africa.</h1>
                 <p>Connect with African communities worldwide. Share, discuss, and grow together.</p>
                 <div class="cta">
-                    <button onclick="openModal('signupModal')" class="btn btn-primary">Join Now</button>
-                    <button onclick="openModal('signinModal')" class="btn btn-secondary">Sign In</button>
+                    <button class="btn btn-primary">Join Now</button>
+                    <button class="btn btn-secondary">Sign In</button>
                 </div>
             </div>
         </section>
@@ -124,9 +124,9 @@
     <!-- Sign In Modal -->
     <div id="signinModal" class="modal">
         <div class="modal-content">
-            <button class="close" onclick="closeModal('signinModal')" aria-label="Close sign-in modal">&times;</button>
+            <button class="close" aria-label="Close sign-in modal">&times;</button>
             <h2>Sign In</h2>
-            <button onclick="signInWithGoogle()" class="social-button">
+            <button class="social-button">
                 <img src="assets/images/google-icon.svg" alt="" aria-hidden="true"> Continue with Google
             </button>
             <div class="auth-divider"><span>or</span></div>
@@ -142,20 +142,20 @@
                     <div id="signinPasswordError" class="error-message">Please enter your password.</div>
                 </div>
                 <div class="forgot-password">
-                    <a href="#" onclick="openModal('forgotPasswordModal'); closeModal('signinModal')">Forgot password?</a>
+                    <a href="#">Forgot password?</a>
                 </div>
-                <button type="button" onclick="signIn()" class="btn btn-primary">Sign In</button>
+                <button type="button" class="btn btn-primary">Sign In</button>
             </form>
-            <p class="modal-switch">Don’t have an account? <a href="#" onclick="closeModal('signinModal'); openModal('signupModal')">Sign up</a></p>
+            <p class="modal-switch">Don’t have an account? <a href="#">Sign up</a></p>
         </div>
     </div>
 
     <!-- Sign Up Modal -->
     <div id="signupModal" class="modal">
         <div class="modal-content">
-            <button class="close" onclick="closeModal('signupModal')" aria-label="Close sign-up modal">&times;</button>
+            <button class="close" aria-label="Close sign-up modal">&times;</button>
             <h2>Create Account</h2>
-            <button onclick="signInWithGoogle()" class="social-button">
+            <button class="social-button">
                 <img src="assets/images/google-icon.svg" alt="" aria-hidden="true"> Continue with Google
             </button>
             <div class="auth-divider"><span>or</span></div>
@@ -180,16 +180,16 @@
                     <input type="password" id="signupPassword" class="form-input" required aria-describedby="signupPasswordError">
                     <div id="signupPasswordError" class="error-message">Password must be at least 8 characters.</div>
                 </div>
-                <button type="button" onclick="signUp()" class="btn btn-primary">Sign Up</button>
+                <button type="button" class="btn btn-primary">Sign Up</button>
             </form>
-            <p class="modal-switch">Already have an account? <a href="#" onclick="closeModal('signupModal'); openModal('signinModal')">Sign in</a></p>
+            <p class="modal-switch">Already have an account? <a href="#">Sign in</a></p>
         </div>
     </div>
 
     <!-- Forgot Password Modal -->
     <div id="forgotPasswordModal" class="modal">
         <div class="modal-content">
-            <button class="close" onclick="closeModal('forgotPasswordModal')" aria-label="Close password reset modal">&times;</button>
+            <button class="close" aria-label="Close password reset modal">&times;</button>
             <h2>Reset Password</h2>
             <p>Enter your email and we'll send you a link to reset your password.</p>
             <form id="forgotPasswordForm">
@@ -198,9 +198,9 @@
                     <input type="email" id="forgotPasswordEmail" class="form-input" required aria-describedby="forgotPasswordEmailError">
                     <div id="forgotPasswordEmailError" class="error-message">Please enter a valid email.</div>
                 </div>
-                <button type="button" onclick="resetPassword()" class="btn btn-primary">Send Reset Link</button>
+                <button type="button" class="btn btn-primary">Send Reset Link</button>
             </form>
-            <p class="modal-switch"><a href="#" onclick="closeModal('forgotPasswordModal'); openModal('signinModal')">Back to Sign In</a></p>
+            <p class="modal-switch"><a href="#">Back to Sign In</a></p>
         </div>
     </div>
 

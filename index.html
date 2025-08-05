@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyAfroSphere - Beyond Borders, Within Africa | African Diaspora Community</title>
+    <meta name="description" content="Join MyAfroSphere, the premier digital home for the African diaspora. Connect with your African family worldwide.">
+    <meta name="keywords" content="African diaspora, Pan-African, African community platform, cultural connection, mental wellness, African heritage">
+    <meta name="author" content="MyAfroSphere">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://myafrosphere.pages.dev">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "MyAfroSphere",
+        "url": "https://myafrosphere.pages.dev",
+        "description": "Connect with African communities worldwide. Share, discuss, and grow together."
+    }
+    </script>
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="MyAfroSphere - Beyond Borders, Within Africa">
+    <meta property="og:description" content="Connect with African communities worldwide. Join c/Nigeria, c/Ghana, s/futureofafrica.">
+    <meta property="og:image" content="https://myafrosphere.pages.dev/assets/images/myafrosphere_logo.webp">
+    <meta property="og:url" content="https://myafrosphere.pages.dev">
+    <meta property="og:type" content="website">
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://myafrosphere.pages.dev; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self';">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="/" class="logo-nav">
+                <img src="assets/images/myafrosphere_logo.webp" alt="MyAfroSphere Logo" width="40" height="40" loading="lazy">
+                <span>MyAfroSphere</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#communities">Communities</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="#" onclick="openModal('signinModal')" class="login-btn">Sign In</a>
+                    <a href="#" onclick="openModal('signupModal')" class="cta-nav">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1><span class="logo-text">myAfroSphere</span><br>Beyond Borders. Within Africa.</h1>
+                <p>Connect with African communities worldwide. Share, discuss, and grow together.</p>
+                <div class="cta">
+                    <button onclick="openModal('signupModal')" class="btn btn-primary">Join Now</button>
+                    <button onclick="openModal('signinModal')" class="btn btn-secondary">Sign In</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- African Nations Carousel -->
+        <section class="carousel-section" id="communities">
+            <div class="container">
+                <div class="carousel-header">
+                    <h2>Discover Your Community</h2>
+                    <p>Click any flag to explore and join vibrant African communities.</p>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="countrySearch" class="form-input" placeholder="Search communities..." aria-label="Search for African communities">
+                </div>
+                <div class="carousel-container">
+                    <div id="carouselTrack" class="carousel-track"></div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-control prev" aria-label="Previous community">◄</button>
+                    <button class="carousel-control next" aria-label="Next community">►</button>
+                    <button class="carousel-control pause" aria-label="Pause carousel">⏸</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section class="events-section" id="events">
+            <div class="container">
+                <h2>Upcoming Events</h2>
+                <p>Join virtual and in-person events to connect with the African diaspora.</p>
+                <div class="event-card">
+                    <h3>African Diaspora Summit</h3>
+                    <p>Join us for a virtual summit discussing cultural heritage and opportunities. Date: TBD.</p>
+                </div>
+                <div class="event-card">
+                    <h3>Community Meetup: Nigeria</h3>
+                    <p>Connect with Nigerians worldwide in our monthly meetup. Date: TBD.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <h2>About MyAfroSphere</h2>
+                <p>MyAfroSphere is a platform dedicated to uniting the African diaspora. Our mission is to foster cultural connections, share opportunities, and celebrate African heritage worldwide.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sign In Modal -->
+    <div id="signinModal" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closeModal('signinModal')" aria-label="Close sign-in modal">&times;</button>
+            <h2>Sign In</h2>
+            <button onclick="signInWithGoogle()" class="social-button">
+                <img src="assets/images/google-icon.svg" alt="" aria-hidden="true"> Continue with Google
+            </button>
+            <div class="auth-divider"><span>or</span></div>
+            <form id="signinForm">
+                <div class="form-group">
+                    <label for="signinEmail">Email</label>
+                    <input type="email" id="signinEmail" class="form-input" required aria-describedby="signinEmailError">
+                    <div id="signinEmailError" class="error-message">Please enter a valid email.</div>
+                </div>
+                <div class="form-group">
+                    <label for="signinPassword">Password</label>
+                    <input type="password" id="signinPassword" class="form-input" required aria-describedby="signinPasswordError">
+                    <div id="signinPasswordError" class="error-message">Please enter your password.</div>
+                </div>
+                <div class="forgot-password">
+                    <a href="#" onclick="openModal('forgotPasswordModal'); closeModal('signinModal')">Forgot password?</a>
+                </div>
+                <button type="button" onclick="signIn()" class="btn btn-primary">Sign In</button>
+            </form>
+            <p class="modal-switch">Don’t have an account? <a href="#" onclick="closeModal('signinModal'); openModal('signupModal')">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closeModal('signupModal')" aria-label="Close sign-up modal">&times;</button>
+            <h2>Create Account</h2>
+            <button onclick="signInWithGoogle()" class="social-button">
+                <img src="assets/images/google-icon.svg" alt="" aria-hidden="true"> Continue with Google
+            </button>
+            <div class="auth-divider"><span>or</span></div>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" class="form-input" required aria-describedby="firstNameError">
+                    <div id="firstNameError" class="error-message">Please enter your first name.</div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" class="form-input" required aria-describedby="lastNameError">
+                    <div id="lastNameError" class="error-message">Please enter your last name.</div>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" class="form-input" required aria-describedby="signupEmailError">
+                    <div id="signupEmailError" class="error-message">Please enter a valid email.</div>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" class="form-input" required aria-describedby="signupPasswordError">
+                    <div id="signupPasswordError" class="error-message">Password must be at least 8 characters.</div>
+                </div>
+                <button type="button" onclick="signUp()" class="btn btn-primary">Sign Up</button>
+            </form>
+            <p class="modal-switch">Already have an account? <a href="#" onclick="closeModal('signupModal'); openModal('signinModal')">Sign in</a></p>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closeModal('forgotPasswordModal')" aria-label="Close password reset modal">&times;</button>
+            <h2>Reset Password</h2>
+            <p>Enter your email and we'll send you a link to reset your password.</p>
+            <form id="forgotPasswordForm">
+                <div class="form-group">
+                    <label for="forgotPasswordEmail">Email</label>
+                    <input type="email" id="forgotPasswordEmail" class="form-input" required aria-describedby="forgotPasswordEmailError">
+                    <div id="forgotPasswordEmailError" class="error-message">Please enter a valid email.</div>
+                </div>
+                <button type="button" onclick="resetPassword()" class="btn btn-primary">Send Reset Link</button>
+            </form>
+            <p class="modal-switch"><a href="#" onclick="closeModal('forgotPasswordModal'); openModal('signinModal')">Back to Sign In</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MyAfroSphere. All rights reserved.</p>
+            <p>Contact: <a href="mailto:hello@myafrosphere.com">hello@myafrosphere.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.min.js" defer></script>
+</body>
+</html>

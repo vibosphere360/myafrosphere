@@ -25,19 +25,18 @@
     <meta property="og:title" content="MyAfroSphere - Beyond Borders, Within Africa">
     <meta property="og:description" content="Connect with African communities worldwide. Join c/Nigeria, c/Ghana, s/futureofafrica.">
     <meta property="og:image" content="https://myafrosphere.pages.dev/assets/images/myafrosphere_logo.webp">
-    <meta property="og:image:alt" content="MyAfroSphere Logo">
     <meta property="og:url" content="https://myafrosphere.pages.dev">
     <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@MyAfroSphere">
-    <meta name="twitter:image:alt" content="MyAfroSphere Logo">
+    <meta name="twitter:site" content="@myafrosphere">
+    <meta name="twitter:title" content="MyAfroSphere - Beyond Borders, Within Africa">
+    <meta name="twitter:description" content="Connect with African communities worldwide. Join c/Nigeria, c/Ghana, s/futureofafrica.">
+    <meta name="twitter:image" content="https://myafrosphere.pages.dev/assets/images/myafrosphere_logo.webp">
 
     <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self';">
-
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="assets/images/myafrosphere_logo.webp" as="image">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://*.googleapis.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline';">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -76,7 +75,7 @@
                 <h1><span class="logo-text">myAfroSphere</span><br>Beyond Borders. Within Africa.</h1>
                 <p>Connect with African communities worldwide. Share, discuss, and grow together.</p>
                 <div class="cta">
-                    <button class="btn btn-primary" onclick="joinCommunity('futureofafrica')">Join s/futureofafrica</button>
+                    <button class="btn btn-primary" onclick="captureEmail('futureofafrica')">Join s/futureofafrica</button>
                     <button class="btn btn-secondary" onclick="openModal('signinModal')">Sign In</button>
                 </div>
             </div>
@@ -126,12 +125,12 @@
     </main>
 
     <!-- Sign In Modal -->
-    <div id="signinModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="signinModalTitle">
+    <div id="signinModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="signinModalTitle" aria-hidden="true">
         <div class="modal-content">
             <button class="close" aria-label="Close sign-in modal">&times;</button>
             <h2 id="signinModalTitle">Sign In</h2>
             <button class="social-button" onclick="signInWithGoogle()">
-                <img src="assets/images/google-icon.svg" alt="Google Icon" width="24" height="24" aria-hidden="true"> Continue with Google
+                <img src="assets/images/google-icon.svg" alt="" aria-hidden="true"> Continue with Google
             </button>
             <div class="auth-divider"><span>or</span></div>
             <form id="signinForm">
@@ -148,19 +147,19 @@
                 <div class="forgot-password">
                     <a href="javascript:void(0)" id="forgotPasswordLink">Forgot password?</a>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="signIn()">Sign In</button>
+                <button type="button" class="btn btn-primary">Sign In</button>
             </form>
             <p class="modal-switch">Don’t have an account? <a href="javascript:void(0)" id="signupFromSignin">Sign up</a></p>
         </div>
     </div>
 
     <!-- Sign Up Modal -->
-    <div id="signupModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="signupModalTitle">
+    <div id="signupModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="signupModalTitle" aria-hidden="true">
         <div class="modal-content">
             <button class="close" aria-label="Close sign-up modal">&times;</button>
             <h2 id="signupModalTitle">Create Account</h2>
             <button class="social-button" onclick="signInWithGoogle()">
-                <img src="assets/images/google-icon.svg" alt="Google Icon" width="24" height="24" aria-hidden="true"> Continue with Google
+                <img src="assets/images/google-icon.svg" alt="" aria-hidden="true"> Continue with Google
             </button>
             <div class="auth-divider"><span>or</span></div>
             <form id="signupForm">
@@ -184,14 +183,14 @@
                     <input type="password" id="signupPassword" class="form-input" required aria-describedby="signupPasswordError">
                     <div id="signupPasswordError" class="error-message">Password must be at least 8 characters.</div>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="signUp()">Sign Up</button>
+                <button type="button" class="btn btn-primary">Sign Up</button>
             </form>
             <p class="modal-switch">Already have an account? <a href="javascript:void(0)" id="signinFromSignup">Sign in</a></p>
         </div>
     </div>
 
     <!-- Forgot Password Modal -->
-    <div id="forgotPasswordModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="forgotPasswordModalTitle">
+    <div id="forgotPasswordModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="forgotPasswordModalTitle" aria-hidden="true">
         <div class="modal-content">
             <button class="close" aria-label="Close password reset modal">&times;</button>
             <h2 id="forgotPasswordModalTitle">Reset Password</h2>
@@ -202,7 +201,7 @@
                     <input type="email" id="forgotPasswordEmail" class="form-input" required aria-describedby="forgotPasswordEmailError">
                     <div id="forgotPasswordEmailError" class="error-message">Please enter a valid email.</div>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="resetPassword()">Send Reset Link</button>
+                <button type="button" class="btn btn-primary">Send Reset Link</button>
             </form>
             <p class="modal-switch"><a href="javascript:void(0)" id="backToSignin">Back to Sign In</a></p>
         </div>
@@ -214,8 +213,8 @@
             <h2>Wear Your Flag With Pride 🇳🇬</h2>
             <p>Share your African community with friends and family.</p>
             <div class="share-buttons">
-                <button class="share-btn" onclick="shareToWhatsApp('Nigeria')">📤 Share on WhatsApp</button>
-                <button class="share-btn" onclick="shareToX('Nigeria')">🐦 Share on X</button>
+                <button class="share-btn" onclick="shareToWhatsApp()">📤 Share on WhatsApp</button>
+                <button class="share-btn" onclick="shareToX()">🐦 Share on X</button>
             </div>
         </div>
     </section>
@@ -229,6 +228,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="script.js"></script>
+    <script src="main.js" defer></script>
 </body>
 </html>

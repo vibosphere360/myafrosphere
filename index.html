@@ -29,14 +29,24 @@
     <meta property="og:type" content="website">
 
     <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://myafrosphere.pages.dev; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://*.tile.openstreetmap.org data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://unpkg.com;">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
+    <style>
+        #worldMap, #africaMap {
+            height: 400px;
+            border-radius: 16px;
+            margin: 24px 0;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
@@ -51,6 +61,7 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="#communities">Communities</a></li>
+                    <li><a href="#maps">Maps</a></li>
                     <li><a href="#events">Events</a></li>
                     <li><a href="#about">About</a></li>
                 </ul>
@@ -93,6 +104,20 @@
                     <button class="carousel-control next" aria-label="Next community">►</button>
                     <button class="carousel-control pause" aria-label="Pause carousel">⏸</button>
                 </div>
+            </div>
+        </section>
+
+        <!-- Maps Section -->
+        <section class="maps-section" id="maps">
+            <div class="container">
+                <h2>Find Your People on the Map</h2>
+                <p>Explore African communities around the world — from Lagos to London, Atlanta to Accra.</p>
+
+                <h3>Global African Diaspora</h3>
+                <div id="worldMap"></div>
+
+                <h3>Focus on Africa</h3>
+                <div id="africaMap"></div>
             </div>
         </section>
 
@@ -142,11 +167,11 @@
                     <div id="signinPasswordError" class="error-message">Please enter your password.</div>
                 </div>
                 <div class="forgot-password">
-                    <a href="#">Forgot password?</a>
+                    <a href="#" id="forgotPasswordLink">Forgot password?</a>
                 </div>
                 <button type="button" class="btn btn-primary">Sign In</button>
             </form>
-            <p class="modal-switch">Don’t have an account? <a href="#">Sign up</a></p>
+            <p class="modal-switch">Don’t have an account? <a href="#" id="signupFromSignin">Sign up</a></p>
         </div>
     </div>
 
@@ -182,7 +207,7 @@
                 </div>
                 <button type="button" class="btn btn-primary">Sign Up</button>
             </form>
-            <p class="modal-switch">Already have an account? <a href="#">Sign in</a></p>
+            <p class="modal-switch">Already have an account? <a href="#" id="signinFromSignup">Sign in</a></p>
         </div>
     </div>
 
@@ -200,7 +225,7 @@
                 </div>
                 <button type="button" class="btn btn-primary">Send Reset Link</button>
             </form>
-            <p class="modal-switch"><a href="#">Back to Sign In</a></p>
+            <p class="modal-switch"><a href="#" id="backToSignin">Back to Sign In</a></p>
         </div>
     </div>
 
@@ -211,6 +236,9 @@
             <p>Contact: <a href="mailto:hello@myafrosphere.com">hello@myafrosphere.com</a></p>
         </div>
     </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <!-- Scripts -->
     <script src="assets/js/main.min.js" defer></script>

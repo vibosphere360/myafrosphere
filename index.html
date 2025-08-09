@@ -5,50 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyAfroSphere - Beyond Borders, Within Africa | African Diaspora Community</title>
     <meta name="description" content="Join MyAfroSphere, the premier digital home for the African diaspora. Connect with your African family worldwide.">
-    <meta name="keywords" content="African diaspora, Pan-African, African community platform, cultural connection, mental wellness, African heritage">
-    <meta name="author" content="MyAfroSphere">
+    
+    <!-- African Network Optimizations -->
+    <meta http-equiv="Cache-Control" content="max-age=604800, public">
+    <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://myafrosphere.pages.dev">
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "MyAfroSphere",
-        "url": "https://myafrosphere.pages.dev",
-        "description": "Connect with African communities worldwide. Share, discuss, and grow together."
-    }
-    </script>
-
-    <!-- Open Graph / Social -->
-    <meta property="og:title" content="MyAfroSphere - Beyond Borders, Within Africa">
-    <meta property="og:description" content="Connect with African communities worldwide. Join c/Nigeria, c/Ghana, s/futureofafrica.">
-    <meta property="og:image" content="https://myafrosphere.pages.dev/assets/images/myafrosphere_logo.webp">
-    <meta property="og:image:alt" content="MyAfroSphere Logo">
-    <meta property="og:url" content="https://myafrosphere.pages.dev">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@MyAfroSphere">
-    <meta name="twitter:title" content="MyAfroSphere - Beyond Borders, Within Africa">
-    <meta name="twitter:description" content="Connect with African communities worldwide. Join c/Nigeria, c/Ghana, s/futureofafrica.">
-    <meta name="twitter:image" content="https://myafrosphere.pages.dev/assets/images/myafrosphere_logo.webp">
-    <meta name="twitter:image:alt" content="MyAfroSphere Logo">
-
-    <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self';">
-
+    
     <!-- Preload Critical Resources -->
     <link rel="preload" href="assets/images/myafrosphere_logo.webp" as="image">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style">
-
+    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+    
+    <noscript>
+      <style>
+        .carousel { animation: none !important; }
+        .loading { display: none !important; }
+      </style>
+    </noscript>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
@@ -66,57 +44,69 @@
                     <li><a href="#stories">Stories</a></li>
                     <li><a href="#about">About</a></li>
                 </ul>
-                <div class="auth-buttons">
-                    <a href="javascript:void(0)" class="login-btn" onclick="openModal('signinModal')">Sign In</a>
-                    <a href="javascript:void(0)" class="cta-nav" onclick="openModal('signupModal')">Sign Up</a>
-                </div>
             </nav>
         </div>
     </header>
 
     <main id="main-content">
-        <!-- Hero Section -->
+        <!-- Hero Section - Uber Style -->
         <section class="hero">
             <div class="container">
                 <h1><span class="logo-text">myAfroSphere</span><br>Beyond Borders. Within Africa.</h1>
-                <p>Connect with African communities worldwide. Share, discuss, and grow together.</p>
+                <p>Which African community do you belong to?</p>
                 <div class="cta">
-                    <button class="btn btn-primary" onclick="captureEmail('futureofafrica')">Join s/futureofafrica</button>
-                    <button class="btn btn-secondary" onclick="openModal('signinModal')">Sign In</button>
+                    <div class="country-picker">
+                        <div class="flag-grid">
+                            <button onclick="joinFlow('Nigeria')" aria-label="Nigeria">🇳🇬</button>
+                            <button onclick="joinFlow('Ghana')" aria-label="Ghana">🇬🇭</button>
+                            <button onclick="joinFlow('Kenya')" aria-label="Kenya">🇰🇪</button>
+                            <button onclick="showAllCountries()" aria-label="More countries">•••</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- African Nations Carousel -->
+        <!-- TikTok Style Story Feed -->
+        <section class="story-feed" id="stories">
+            <div class="container">
+                <h2>Voices from the Diaspora</h2>
+                
+                <div class="story" onclick="engageWithStory(1)">
+                    <p class="excerpt">"Moving back to Lagos changed everything about how I see my identity..."</p>
+                    <div class="engagement">
+                        <span>🇳🇬 24 upvotes</span>
+                        <button onclick="event.stopPropagation(); joinFlow('Nigeria')">
+                            Share yours →
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="story" onclick="engageWithStory(2)">
+                    <p class="excerpt">"In London, we celebrate Obonwe with jollof and Afrobeats. My kids love it..."</p>
+                    <div class="engagement">
+                        <span>🇬🇭 18 upvotes</span>
+                        <button onclick="event.stopPropagation(); joinFlow('Ghana')">
+                            Share yours →
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="swipe-prompt">
+                    <span>← Swipe for more diaspora stories →</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Countries Section -->
         <section class="carousel-section" id="communities">
             <div class="container">
                 <div class="carousel-header">
-                    <h2>Which Community Is Yours?</h2>
-                    <p>Click your flag. We’ll save your spot.</p>
+                    <h2>Find Your African Community</h2>
+                    <p>54 countries. One family.</p>
                 </div>
                 <div class="carousel-container">
                     <div id="carouselTrack" class="carousel-track"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- For Africa Feed (TikTok Style) -->
-        <section class="for-africa-feed" id="stories">
-            <div class="container">
-                <h2>Stories From the Diaspora</h2>
-                <div class="story-card">
-                    <p>"I moved back to Lagos last year. The food, the energy — it’s home."</p>
-                    <small class="story-author">— Ada, c/Nigeria</small>
-                    <div class="story-action">
-                        <button class="btn btn-primary" onclick="captureEmail('Nigeria')">Share Your Story</button>
-                    </div>
-                </div>
-                <div class="story-card">
-                    <p>"In London, we celebrate Obonwe with jollof and Afrobeats. My kids love it."</p>
-                    <small class="story-author">— Kwame, c/Ghana</small>
-                    <div class="story-action">
-                        <button class="btn btn-primary" onclick="captureEmail('Ghana')">Share Your Story</button>
-                    </div>
                 </div>
             </div>
         </section>
@@ -130,101 +120,6 @@
         </section>
     </main>
 
-    <!-- Sign In Modal -->
-    <div id="signinModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="signinModalTitle" aria-hidden="true">
-        <div class="modal-content">
-            <button class="close" aria-label="Close sign-in modal">&times;</button>
-            <h2 id="signinModalTitle">Sign In</h2>
-            <button class="social-button" onclick="signInWithGoogle()">
-                <img src="assets/images/google-icon.svg" alt="" width="20" height="20" aria-hidden="true"> Continue with Google
-            </button>
-            <div class="auth-divider"><span>or</span></div>
-            <form id="signinForm">
-                <div class="form-group">
-                    <label for="signinEmail">Email</label>
-                    <input type="email" id="signinEmail" class="form-input" required aria-describedby="signinEmailError">
-                    <div id="signinEmailError" class="error-message">Please enter a valid email.</div>
-                </div>
-                <div class="form-group">
-                    <label for="signinPassword">Password</label>
-                    <input type="password" id="signinPassword" class="form-input" required aria-describedby="signinPasswordError">
-                    <div id="signinPasswordError" class="error-message">Please enter your password.</div>
-                </div>
-                <div class="forgot-password">
-                    <a href="javascript:void(0)" id="forgotPasswordLink">Forgot password?</a>
-                </div>
-                <button type="button" class="btn btn-primary">Sign In</button>
-            </form>
-            <p class="modal-switch">Don’t have an account? <a href="javascript:void(0)" id="signupFromSignin">Sign up</a></p>
-        </div>
-    </div>
-
-    <!-- Sign Up Modal -->
-    <div id="signupModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="signupModalTitle" aria-hidden="true">
-        <div class="modal-content">
-            <button class="close" aria-label="Close sign-up modal">&times;</button>
-            <h2 id="signupModalTitle">Create Account</h2>
-            <button class="social-button" onclick="signInWithGoogle()">
-                <img src="assets/images/google-icon.svg" alt="" width="20" height="20" aria-hidden="true"> Continue with Google
-            </button>
-            <div class="auth-divider"><span>or</span></div>
-            <form id="signupForm">
-                <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" class="form-input" required aria-describedby="firstNameError">
-                    <div id="firstNameError" class="error-message">Please enter your first name.</div>
-                </div>
-                <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" class="form-input" required aria-describedby="lastNameError">
-                    <div id="lastNameError" class="error-message">Please enter your last name.</div>
-                </div>
-                <div class="form-group">
-                    <label for="signupEmail">Email</label>
-                    <input type="email" id="signupEmail" class="form-input" required aria-describedby="signupEmailError">
-                    <div id="signupEmailError" class="error-message">Please enter a valid email.</div>
-                </div>
-                <div class="form-group">
-                    <label for="signupPassword">Password</label>
-                    <input type="password" id="signupPassword" class="form-input" required aria-describedby="signupPasswordError">
-                    <div id="signupPasswordError" class="error-message">Password must be at least 8 characters.</div>
-                </div>
-                <button type="button" class="btn btn-primary">Sign Up</button>
-            </form>
-            <p class="modal-switch">Already have an account? <a href="javascript:void(0)" id="signinFromSignup">Sign in</a></p>
-        </div>
-    </div>
-
-    <!-- Forgot Password Modal -->
-    <div id="forgotPasswordModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="forgotPasswordModalTitle" aria-hidden="true">
-        <div class="modal-content">
-            <button class="close" aria-label="Close password reset modal">&times;</button>
-            <h2 id="forgotPasswordModalTitle">Reset Password</h2>
-            <p>Enter your email and we'll send you a link to reset your password.</p>
-            <form id="forgotPasswordForm">
-                <div class="form-group">
-                    <label for="forgotPasswordEmail">Email</label>
-                    <input type="email" id="forgotPasswordEmail" class="form-input" required aria-describedby="forgotPasswordEmailError">
-                    <div id="forgotPasswordEmailError" class="error-message">Please enter a valid email.</div>
-                </div>
-                <button type="button" class="btn btn-primary">Send Reset Link</button>
-            </form>
-            <p class="modal-switch"><a href="javascript:void(0)" id="backToSignin">Back to Sign In</a></p>
-        </div>
-    </div>
-
-    <!-- Share Prompt -->
-    <section class="share-prompt">
-        <div class="container">
-            <h2>Wear Your Flag With Pride 🇳🇬</h2>
-            <p>Share your African community with friends and family.</p>
-            <div class="share-buttons">
-                <button class="share-btn" onclick="shareToWhatsApp('Nigeria')">📤 Share on WhatsApp</button>
-                <button class="share-btn" onclick="shareToX('Nigeria')">🐦 Share on X</button>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -234,6 +129,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="main.js" defer></script>
+    <script src="main.js"></script>
 </body>
 </html>

@@ -25,18 +25,24 @@
     <meta property="og:title" content="MyAfroSphere - Beyond Borders, Within Africa">
     <meta property="og:description" content="Connect with African communities worldwide. Join c/Nigeria, c/Ghana, s/futureofafrica.">
     <meta property="og:image" content="https://myafrosphere.pages.dev/assets/images/myafrosphere_logo.webp">
+    <meta property="og:image:alt" content="MyAfroSphere Logo">
     <meta property="og:url" content="https://myafrosphere.pages.dev">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@myafrosphere">
+    <meta name="twitter:site" content="@MyAfroSphere">
     <meta name="twitter:title" content="MyAfroSphere - Beyond Borders, Within Africa">
     <meta name="twitter:description" content="Connect with African communities worldwide. Join c/Nigeria, c/Ghana, s/futureofafrica.">
     <meta name="twitter:image" content="https://myafrosphere.pages.dev/assets/images/myafrosphere_logo.webp">
+    <meta name="twitter:image:alt" content="MyAfroSphere Logo">
 
     <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://*.googleapis.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self';">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/images/myafrosphere_logo.webp" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -130,7 +136,7 @@
             <button class="close" aria-label="Close sign-in modal">&times;</button>
             <h2 id="signinModalTitle">Sign In</h2>
             <button class="social-button" onclick="signInWithGoogle()">
-                <img src="assets/images/google-icon.svg" alt="" aria-hidden="true"> Continue with Google
+                <img src="assets/images/google-icon.svg" alt="" width="20" height="20" aria-hidden="true"> Continue with Google
             </button>
             <div class="auth-divider"><span>or</span></div>
             <form id="signinForm">
@@ -159,7 +165,7 @@
             <button class="close" aria-label="Close sign-up modal">&times;</button>
             <h2 id="signupModalTitle">Create Account</h2>
             <button class="social-button" onclick="signInWithGoogle()">
-                <img src="assets/images/google-icon.svg" alt="" aria-hidden="true"> Continue with Google
+                <img src="assets/images/google-icon.svg" alt="" width="20" height="20" aria-hidden="true"> Continue with Google
             </button>
             <div class="auth-divider"><span>or</span></div>
             <form id="signupForm">
@@ -213,8 +219,8 @@
             <h2>Wear Your Flag With Pride 🇳🇬</h2>
             <p>Share your African community with friends and family.</p>
             <div class="share-buttons">
-                <button class="share-btn" onclick="shareToWhatsApp()">📤 Share on WhatsApp</button>
-                <button class="share-btn" onclick="shareToX()">🐦 Share on X</button>
+                <button class="share-btn" onclick="shareToWhatsApp('Nigeria')">📤 Share on WhatsApp</button>
+                <button class="share-btn" onclick="shareToX('Nigeria')">🐦 Share on X</button>
             </div>
         </div>
     </section>

@@ -81,7 +81,19 @@ const africanCountries = [
     { name: 'Nigeria', code: 'NG', emoji: '🇳🇬', region: 'West Africa' },
     { name: 'Ghana', code: 'GH', emoji: '🇬🇭', region: 'West Africa' },
     { name: 'Kenya', code: 'KE', emoji: '🇰🇪', region: 'East Africa' },
-    // ... (keep all countries from your original list)
+    { name: 'South Africa', code: 'ZA', emoji: '🇿🇦', region: 'Southern Africa' },
+    { name: 'Egypt', code: 'EG', emoji: '🇪🇬', region: 'North Africa' },
+    { name: 'Morocco', code: 'MA', emoji: '🇲🇦', region: 'North Africa' },
+    { name: 'Ethiopia', code: 'ET', emoji: '🇪🇹', region: 'East Africa' },
+    { name: 'Tanzania', code: 'TZ', emoji: '🇹🇿', region: 'East Africa' },
+    { name: 'Uganda', code: 'UG', emoji: '🇺🇬', region: 'East Africa' },
+    { name: "Côte d'Ivoire", code: 'CI', emoji: '🇨🇮', region: 'West Africa' },
+    { name: 'Senegal', code: 'SN', emoji: '🇸🇳', region: 'West Africa' },
+    { name: 'Algeria', code: 'DZ', emoji: '🇩🇿', region: 'North Africa' },
+    { name: 'Zambia', code: 'ZM', emoji: '🇿🇲', region: 'Southern Africa' },
+    { name: 'Zimbabwe', code: 'ZW', emoji: '🇿🇼', region: 'Southern Africa' },
+    { name: 'Cameroon', code: 'CM', emoji: '🇨🇲', region: 'Central Africa' },
+    { name: 'Tunisia', code: 'TN', emoji: '🇹🇳', region: 'North Africa' }
 ];
 
 function initializeCarousel() {
